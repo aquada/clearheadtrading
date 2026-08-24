@@ -30,7 +30,7 @@ The limit only works if it's decided when there's no pressure attached to it, no
 
 ## What counts toward the limit
 
-Realized losses count, obviously, but a limit that only tracks closed positions can miss the damage of an open trade moving hard against an account mid-session. The number that matters is the one a trader can see and act on in real time, which for most retail accounts means closed P&L rather than unrealized drawdown on a position still open.
+Realised losses count, obviously, but a limit that only tracks closed positions can miss the damage of an open trade moving hard against an account mid-session. The number that matters is the one a trader can see and act on in real time, which for most retail accounts means closed P&L rather than unrealised drawdown on a position still open.
 
 ---
 

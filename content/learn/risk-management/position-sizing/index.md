@@ -18,7 +18,7 @@ Position size decides how much a single trade can cost, and it's the one number 
 
 Position size = risk amount ÷ stop distance. Decide how much money the trade is allowed to lose, decide how far away the stop needs to sit based on the chart, and the size that connects the two is arithmetic, not a feel.
 
-*Example: a $10,000 account risking 1% per trade has $100 on the line. On a US500 CFD where each point is worth $1 per lot, a stop 20 points away needs a position of $100 ÷ 20 = 5 lots. If the stop is hit, the loss is 20 points × $5 a point, exactly the $100 that was budgeted.*
+*Example: a $10,000 account risking 1% per trade has $100 at risk. On a US500 CFD where each point is worth $1 per lot, a stop 20 points away needs a position of $100 ÷ 20 = 5 lots. If the stop is hit, the loss is 20 points × $5 a point, exactly the $100 that was budgeted.*
 
 ---
 

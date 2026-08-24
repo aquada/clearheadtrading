@@ -32,7 +32,7 @@ Losing back to zero, or close to it, doesn't just cost the money, it costs every
 
 ## What breaks compounding in practice
 
-Compounding math looks clean on a spreadsheet and gets broken by the same things covered elsewhere in this section: oversized positions relative to account risk, moving stops instead of respecting them, and drawdowns that aren't caught early. Compounding isn't a separate skill from risk management, it's what risk management done consistently produces over enough time, and it's the reason a boring, repeatable process tends to outperform a more exciting one with occasional big setbacks.
+Compounding maths looks clean on a spreadsheet and gets broken by the same things covered elsewhere in this section: oversized positions relative to account risk, moving stops instead of respecting them, and drawdowns that aren't caught early. Compounding isn't a separate skill from risk management, it's what risk management done consistently produces over enough time, and it's the reason a boring, repeatable process tends to outperform a more exciting one with occasional big setbacks.
 
 ---
 

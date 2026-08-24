@@ -22,7 +22,7 @@ Most prop firm evaluations combine a daily loss limit, a hard cap on losses with
 
 ## Static vs trailing drawdown
 
-The maximum drawdown rule comes in two forms, and the difference matters more than most traders realize going in. A static drawdown is measured from the account's starting balance and stays fixed regardless of how much profit gets made. A trailing drawdown moves up with the account's equity high-water mark, so profit made early in the evaluation raises the floor a trader can't breach. A trader sitting on a 5% gain can lose that entire 5% before breaching the rule, not the original starting-balance cushion they might assume they still have.
+The maximum drawdown rule comes in two forms, and the difference matters more than most traders realise going in. A static drawdown is measured from the account's starting balance and stays fixed regardless of how much profit gets made. A trailing drawdown moves up with the account's equity high-water mark, so profit made early in the evaluation raises the floor a trader can't breach. A trader sitting on a 5% gain can lose that entire 5% before breaching the rule, not the original starting-balance cushion they might assume they still have.
 
 *Example: a $100,000 account with an 8% trailing drawdown that grows to $106,000. The floor isn't $92,000, 8% below the starting balance, it's $97,520, 8% below the new $106,000 peak, a difference that catches traders who checked the rule once at the start and never revisited it as the balance moved.*
 

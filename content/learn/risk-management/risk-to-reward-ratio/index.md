@@ -16,7 +16,7 @@ Win rate gets talked about far more than it deserves. Risk to reward is the numb
 
 ## The maths
 
-{{< figure src="risk-reward.png" caption="Entry in the middle, risk below (orange), reward above (blue). Here the reward is roughly three times the risk." >}}
+{{< figure src="risk-reward.png" caption="Entry in the middle, risk below (red), reward above (teal). Here the reward is roughly three times the risk." >}}
 
 Risk to reward is just the distance to your target divided by the distance to your stop, so risking £50 to make £150 is a 3:1 ratio, usually written as 3R. The breakeven win rate for any given R:R is 1 ÷ (1 + R), which at 3R works out to 25%, meaning you can be wrong three times out of every four and still break even before costs. At 1R you need 50% just to break even, so the ratio does a lot of the work before a single trade is even taken.
 

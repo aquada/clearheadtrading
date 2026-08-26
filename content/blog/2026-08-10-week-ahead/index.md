@@ -3,6 +3,10 @@ title: "Week ahead: DAX, Dow, and Nasdaq after a record-breaking week"
 date: 2026-08-10T10:00:00+02:00
 draft: false
 description: "DAX, Dow, and Nasdaq all closed near records last week, but a heavy US inflation calendar and rising oil prices over the Strait of Hormuz take over as the story this week."
+cover:
+  image: "record-week.png"
+  alt: "Bar chart showing weekly percentage gains: Nasdaq +5.2%, Dow +2.9%, DAX +2.8%"
+  caption: "All three indices closed the week near or at record highs, Nasdaq's semiconductor bounce leading the pack"
 categories: ["Market Review"]
 tags: ["DAX", "Dow", "Nasdaq", "week ahead"]
 ---

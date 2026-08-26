@@ -41,3 +41,7 @@ On M15 there was a clear supply and demand zone at the Overnight High (ONH) — 
 4. **Better chance of higher profits** — letting price reach the target rather than exiting on feel
 
 The market always offers clues about where price is likely to go. Do the work on the higher time frames first, set the target, then let the trade run.
+
+---
+
+*Nothing on this page is financial advice. Trade your own account, manage your own risk.*

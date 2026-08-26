@@ -34,3 +34,7 @@ Price then retraced back up into a supply zone lining up with the Day Close leve
 Every year, month, week, and session is different, but having clear rules for what you'll trade and when gives you an edge, and the harder part is the discipline and patience to wait for those rules to be met. Experience with an instrument helps: the DAX tends to either run cleanly from the open or fake one way before reversing into the real move, and plenty of mornings it just chops for hours and never commits at all.
 
 The lesson underneath all of it is to watch what the market is doing, not what you expect it to do. Wait for a clean setup to come to you, and if you're not sure, stay out.
+
+---
+
+*Nothing on this page is financial advice. Trade your own account, manage your own risk.*

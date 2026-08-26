@@ -23,7 +23,7 @@ I then got interested in bitcoin and algo trading and I found after a lot of per
 
 **What trading challenges are you currently facing and how do you have a plan to get through them?**
 
-The main challenge in my trading has been fear. This includes some FOMO, but mostly it is fear when I am in a trade. I have a strong urge to close trades early or move SL early to either avoid loss or to lock in a small amount of profit. With a win/loss ratio that is under 40% I need to be sure that my winners are decent, and I recognize that this isn't always the case. Awareness is the key here — being honest with myself, being open with others and sharing my faults as well as my wins.
+The main challenge in my trading has been fear. This includes some FOMO, but mostly it is fear when I am in a trade. I have a strong urge to close trades early or move SL early to either avoid loss or to lock in a small amount of profit. With a win/loss ratio that is under 40% I need to be sure that my winners are decent, and I recognise that this isn't always the case. Awareness is the key here — being honest with myself, being open with others and sharing my faults as well as my wins.
 
 **What inspires you to trade and what are your specific reasons to pursue trading?**
 
@@ -45,7 +45,7 @@ Discipline, patience, honesty with yourself, and realistic expectations.
 
 **How do you deal with frustration, self-doubt, and other emotional aspects of trading?**
 
-Not always that well. When I have self-doubt it haunts me and I cannot trade properly. The best place to be, with this or any other emotion, is somewhere other than the charts. One of my main focuses is recognizing these emotions before they cause harm.
+Not always that well. When I have self-doubt it haunts me and I cannot trade properly. The best place to be, with this or any other emotion, is somewhere other than the charts. One of my main focuses is recognising these emotions before they cause harm.
 
 **We all have off days — do you have a process or criteria to understand if it's a day to not trade?**
 

@@ -43,7 +43,7 @@ Three critical elements: discipline, process, and accepting losses immediately u
 
 **How do you deal with frustration, self-doubt, and other emotional aspects of trading?**
 
-Stepping away and practicing IIDSO (If In Doubt Stay Out). Maintaining emotional equilibrium through wins and losses helps prevent overreaction. Journaling and breaks require discipline but demand no performance skill.
+Stepping away and practising IIDSO (If In Doubt Stay Out). Maintaining emotional equilibrium through wins and losses helps prevent overreaction. Journaling and breaks require discipline but demand no performance skill.
 
 **We all have off days — do you have a process or criteria to understand if it's a day to not trade?**
 
@@ -53,7 +53,7 @@ If price action becomes unreadable, taking a break is necessary. During range-bo
 
 **What does your typical trading session, including pre and post, look like?**
 
-Uses a journaling template assessing sleep quality and mental state first. Zooms out to understand the weekly position and upcoming news events. Analyzes price action from daily through individual timeframes, identifying key levels and magnets. Since November, gives equal weight to both directional possibilities rather than predicting a specific outcome.
+Uses a journaling template assessing sleep quality and mental state first. Zooms out to understand the weekly position and upcoming news events. Analyses price action from daily through individual timeframes, identifying key levels and magnets. Since November, gives equal weight to both directional possibilities rather than predicting a specific outcome.
 
 **What market or markets and timeframes do you trade and why?**
 
@@ -87,7 +87,7 @@ Adjusts risk-reward targets and position sizing based on major events like FOMC 
 
 **If you could start over what would you do different?**
 
-Would prioritize securing an early mentor rather than pursuing countless courses, which largely lack genuine value.
+Would prioritise securing an early mentor rather than pursuing countless courses, which largely lack genuine value.
 
 **Was there a notable time when you started to regularly make a profit? Was it gradual or a lightbulb moment?**
 

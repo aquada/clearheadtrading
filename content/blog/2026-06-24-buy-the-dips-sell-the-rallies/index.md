@@ -55,3 +55,7 @@ I set the trail to a candle stop at the M5 TP level and exited at **8R** — 8% 
 ---
 
 I've been trading this strategy for two years and still learning something every day. As with all trading, the most important qualities are **discipline** and **patience** — with those, the results follow.
+
+---
+
+*Nothing on this page is financial advice. Trade your own account, manage your own risk.*

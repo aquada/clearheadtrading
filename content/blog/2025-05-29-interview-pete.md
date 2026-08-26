@@ -37,7 +37,7 @@ Pete values "freedom and contact with mutual souls doing the same." His most pai
 
 **What are the key factors that separate successful day traders from those who fail?**
 
-Successful traders "choose ONE trading strategy/system as simple as possible, test this and 100% follow the rules with proper risk defined." He emphasizes defining daily/weekly loss limits and matching risk exposure to personal temperament.
+Successful traders "choose ONE trading strategy/system as simple as possible, test this and 100% follow the rules with proper risk defined." He emphasises defining daily/weekly loss limits and matching risk exposure to personal temperament.
 
 **How do you deal with frustration, self-doubt, and other emotional aspects of trading?**
 

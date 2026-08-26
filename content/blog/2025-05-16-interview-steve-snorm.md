@@ -23,7 +23,7 @@ Steve identifies automation as his primary challenge, requiring significant time
 
 **What inspires you and what are your specific reasons to pursue trading?**
 
-Steve finds inspiration in "the ability to predict the movement of price and identify the price magnets and potential reversal zones." He emphasizes that trading represents continuous education: "Every day at the charts is another day at trading school. No two days are ever the same."
+Steve finds inspiration in "the ability to predict the movement of price and identify the price magnets and potential reversal zones." He emphasises that trading represents continuous education: "Every day at the charts is another day at trading school. No two days are ever the same."
 
 ## In your head — the tricky topic of psychology
 
@@ -33,7 +33,7 @@ He most enjoys "the high RR trades from low pip/point risk entries." His most pa
 
 **What are the key factors that separate successful day traders from those who fail?**
 
-Steve emphasizes psychological discipline: "If you can't trade like a robot, devoid of any emotion, you will struggle to succeed." He identifies fear, revenge trading, poor planning, and overtrading as primary failure factors.
+Steve emphasises psychological discipline: "If you can't trade like a robot, devoid of any emotion, you will struggle to succeed." He identifies fear, revenge trading, poor planning, and overtrading as primary failure factors.
 
 **How do you deal with frustration, self-doubt, and other emotional aspects of trading?**
 
@@ -41,7 +41,7 @@ His approach involves stepping away from trading temporarily. He notes that emot
 
 **We all have off days — do you have a process or criteria to understand if it's a day to not trade?**
 
-Steve practices self-awareness regarding internal trading impulses: "If those voices are defying logic, contrary to what the price is telling you, or against the trading rules … you know it's time to take 30 minutes off for some mindfulness."
+Steve practises self-awareness regarding internal trading impulses: "If those voices are defying logic, contrary to what the price is telling you, or against the trading rules … you know it's time to take 30 minutes off for some mindfulness."
 
 ## Strategy and trading plan
 
@@ -81,7 +81,7 @@ Steve would avoid purchasing services from scammers, and stop the time-consuming
 
 **Was there a notable time when you started to regularly make a profit?**
 
-Profitability emerged when documenting his technical analysis discoveries, eventually leading to course creation that crystallized his thinking. Developing indicators like eWavesHarmonics and ABC123 proved transformative — requiring logic to translate visual pattern recognition into programmable code for highlighting high-probability setups.
+Profitability emerged when documenting his technical analysis discoveries, eventually leading to course creation that crystallised his thinking. Developing indicators like eWavesHarmonics and ABC123 proved transformative — requiring logic to translate visual pattern recognition into programmable code for highlighting high-probability setups.
 
 **What are the things that are going to separate you from the large majority of traders who fail?**
 

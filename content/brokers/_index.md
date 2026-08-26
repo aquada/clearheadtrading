@@ -1,6 +1,6 @@
 ---
 title: "Brokers"
-description: "Compare forex/CFD brokers — filter by regulation, spreads, commission, EA/algo permission, and platform support."
+description: "Compare forex/CFD brokers: filter by regulation, spreads, commission, EA/algo permission, and platform support."
 ---
 
 Find a broker that fits how you trade. Filter by regulation, execution type,

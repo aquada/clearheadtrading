@@ -1,6 +1,6 @@
 ---
 title: "Topstep Review"
-description: "Topstep funded trading account — rules, costs, and our honest assessment."
+description: "Topstep funded trading account: rules, costs, and our honest assessment."
 ---
 
 Topstep is one of the oldest names in futures prop trading, billed as a monthly subscription ($49-$199/mo depending on account size) rather than a one-time fee.

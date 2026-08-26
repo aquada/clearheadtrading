@@ -1,6 +1,6 @@
 ---
 title: "Prop Firms"
-description: "Compare funded trading accounts — filter by cost, drawdown rules, payout, and EA/algo trading permission."
+description: "Compare funded trading accounts: filter by cost, drawdown rules, payout, and EA/algo trading permission."
 ---
 
 Find the right funded account for how you trade. Filter by challenge cost,

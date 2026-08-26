@@ -1,6 +1,6 @@
 ---
 title: "Fidelcrest Review"
-description: "Fidelcrest funded trading account — rules, costs, and our honest assessment."
+description: "Fidelcrest funded trading account: rules, costs, and our honest assessment."
 draft: true
 ---
 

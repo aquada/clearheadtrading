@@ -1,6 +1,6 @@
 ---
 title: "Apex Trader Funding Review"
-description: "Apex Trader Funding funded trading account — rules, costs, and our honest assessment."
+description: "Apex Trader Funding funded trading account: rules, costs, and our honest assessment."
 ---
 
 Apex is a futures-only firm and, by most trader accounts, the most controversial large prop firm currently operating — it also pays out more in absolute terms than most competitors, but has the highest reported rate of payout denials in the industry, including a documented $800,000 dispute between two traders.

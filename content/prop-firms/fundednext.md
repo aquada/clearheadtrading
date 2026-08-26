@@ -1,6 +1,6 @@
 ---
 title: "FundedNext Review"
-description: "FundedNext funded trading account — rules, costs, and our honest assessment."
+description: "FundedNext funded trading account: rules, costs, and our honest assessment."
 ---
 
 FundedNext (Bangladesh) runs several challenge types — Stellar, Rapid, Legacy, and Bolt — each with its own targets and drawdown rules, which makes like-for-like comparison harder than most firms in this list.

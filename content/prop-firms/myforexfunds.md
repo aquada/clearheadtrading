@@ -1,6 +1,6 @@
 ---
 title: "MyForexFunds Review"
-description: "MyForexFunds funded trading account — rules, costs, and our honest assessment."
+description: "MyForexFunds funded trading account: rules, costs, and our honest assessment."
 draft: true
 ---
 

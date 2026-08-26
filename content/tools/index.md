@@ -1,6 +1,6 @@
 ---
 title: "Tools"
-description: "The for-exe tools I use in live trading — honest first-hand guides."
+description: "The forex tools I use in live trading: honest first-hand guides."
 url: "/tools/"
 ---
 

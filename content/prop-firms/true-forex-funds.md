@@ -1,6 +1,6 @@
 ---
 title: "True Forex Funds Review"
-description: "True Forex Funds funded trading account — rules, costs, and our honest assessment."
+description: "True Forex Funds funded trading account: rules, costs, and our honest assessment."
 draft: true
 ---
 

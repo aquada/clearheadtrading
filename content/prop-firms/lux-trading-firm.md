@@ -1,6 +1,6 @@
 ---
 title: "Lux Trading Firm Review"
-description: "Lux Trading Firm funded trading account — rules, costs, and our honest assessment."
+description: "Lux Trading Firm funded trading account: rules, costs, and our honest assessment."
 ---
 
 Lux Trading Firm prices its challenges in GBP, not EUR/USD as an earlier version of this page had it — real 1-Step Evaluation tiers are £199 / £449 / £999 for 100k / 400k / 1M accounts.

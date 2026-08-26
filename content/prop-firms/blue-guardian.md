@@ -1,6 +1,6 @@
 ---
 title: "Blue Guardian Review"
-description: "Blue Guardian funded trading account — rules, costs, and our honest assessment."
+description: "Blue Guardian funded trading account: rules, costs, and our honest assessment."
 ---
 
 Blue Guardian is run by Iconic Exchange FZCO out of Dubai, founded in 2021. No rebrand history found.

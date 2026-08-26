@@ -9,6 +9,21 @@ generalisable lesson if there is one.
 
 ---
 
+- **2026-08-26 — "for-exe" misread as a typo for "forex" on the Tools
+  page description, changed without checking.** During a site-wide
+  copy audit, "The for-exe tools I use in live trading" looked like a
+  mangled "forex" and got silently corrected to "The forex tools I use
+  in live trading." for-exe (for-exe.com) is a real brand Dan runs,
+  referenced consistently across the interview posts too (Advanced
+  Trade Manager, eWaves, and Session Lines are all described as "from
+  for-exe"). **Caught by Dan** directly: "was this referring to the
+  for-exe.com website, if so it's not a typo." **Fix**: reverted the
+  word, kept the unrelated em-dash-to-colon fix on the same line.
+  **Lesson**: before "fixing" something that looks like a typo, grep
+  the rest of the site for the same string first — a name that looks
+  wrong in isolation may already be attested elsewhere, which would
+  have caught this immediately (for-exe appears in 4 other files).
+
 - **2026-08-19 — contradictory example in "Price Action vs Indicators":
   "three lower highs into a resistance zone."** Lower highs, by definition,
   fall short of the previous high each time, so they can't be repeatedly

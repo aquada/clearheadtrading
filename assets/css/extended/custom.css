@@ -153,8 +153,8 @@ pre code {
 }
 
 .post-categories a {
-    background: var(--primary);
-    color: var(--theme);
+    background: #C96442;
+    color: #fff;
     font-weight: 600;
 }
 

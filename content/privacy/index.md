@@ -1,12 +1,12 @@
 ---
 title: "Privacy Policy"
-description: "How BareChart uses cookies and analytics, and what data is collected."
+description: "How Clear Head Trading uses cookies and analytics, and what data is collected."
 url: "/privacy/"
 ---
 
 Last updated: 10 July 2026.
 
-BareChart is run by a single private trader. This page explains what data is collected when you visit and why.
+Clear Head Trading is run by a single private trader. This page explains what data is collected when you visit and why.
 
 ## Analytics
 

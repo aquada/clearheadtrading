@@ -1,5 +1,5 @@
 ---
-title: "BareChart"
+title: "Clear Head Trading"
 description: "Trading blog, tools, EAs and custom MT5 development for systematic traders."
 ---
 
@@ -10,12 +10,12 @@ description: "Trading blog, tools, EAs and custom MT5 development for systematic
 
 Most traders have too much on their chart. Conflicting signals, indicator soup, setups that look different every time you look at them.
 
-BareChart is built around the opposite idea — strip the chart back to what actually works, then execute it the same way, every session.
+Clear Head Trading is built around the opposite idea — strip the chart back to what actually works, then execute it the same way, every session.
 
 I trade live, every day, London and New York Open. This is what I use, what I build, and what I write about.
 
 </div>
-<img src="/images/naked_candle.png" alt="BareChart mascot" class="hero-mascot">
+<img src="/images/naked_candle.png" alt="Clear Head Trading mascot" class="hero-mascot">
 </div>
 
 ---

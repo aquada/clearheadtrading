@@ -1,5 +1,5 @@
-baseURL = "https://barechart.com/"
-title = "BareChart"
+baseURL = "https://clearheadtrading.com/"
+title = "Clear Head Trading"
 theme = "PaperMod"
 locale = "en-us"
 paginate = 10
@@ -16,7 +16,7 @@ googleAnalytics = "G-PEDMYR1V0K"
   minifyOutput = true
 
 [params]
-  author = "BareChart"
+  author = "Clear Head Trading"
   description = "Trading blog, tools, EAs and custom MT5 development for systematic traders."
   keywords = ["GER40", "EA development", "MQL5", "Expert Advisor", "trading blog", "systematic trading"]
   defaultTheme = "light"
@@ -35,7 +35,7 @@ googleAnalytics = "G-PEDMYR1V0K"
   mainSections = ["blog"]
 
   [params.label]
-    text = "BareChart"
+    text = "Clear Head Trading"
     icon = "/images/favicon_64.png"
     iconHeight = 28
 

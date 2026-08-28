@@ -1,6 +1,6 @@
 <!-- .github/copilot-instructions.md - guidance for AI coding agents -->
 
-# Copilot Instructions — barechart
+# Copilot Instructions — clearheadtrading
 
 Purpose: give an AI coding agent the minimal, actionable knowledge to be productive in this Hugo-based site.
 

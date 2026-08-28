@@ -1,6 +1,6 @@
-# BareChart
+# Clear Head Trading
 
-Source for [barechart.com](https://barechart.com) — a Hugo static site covering trading education (Learn), a blog, tool reviews/affiliate content, and comparison tools for prop firms and brokers.
+Source for [clearheadtrading.com](https://clearheadtrading.com) — a Hugo static site covering trading education (Learn), a blog, tool reviews/affiliate content, and comparison tools for prop firms and brokers.
 
 ## Stack
 
@@ -11,13 +11,13 @@ Source for [barechart.com](https://barechart.com) — a Hugo static site coverin
 ## Local development
 
 ```sh
-git clone --recurse-submodules git@github.com:aquada/barechart.git
-cd barechart
+git clone --recurse-submodules git@github.com:aquada/clearheadtrading.git
+cd clearheadtrading
 hugo server -D --baseURL http://localhost:1313/
 ```
 
 - `--recurse-submodules` matters — the theme lives in a submodule (`git submodule update --init` if you forgot).
-- Always pass `--baseURL` for local dev; the config's `baseURL` is the production domain, and Hugo will otherwise generate absolute links pointing at `barechart.com`.
+- Always pass `--baseURL` for local dev; the config's `baseURL` is the production domain, and Hugo will otherwise generate absolute links pointing at `clearheadtrading.com`.
 - Don't run a production build (`hugo --gc --minify`) into `public/` while `hugo server` is running — they can race on the same output directory.
 - `netlify.toml`'s `[[redirects]]` (`/go/*` affiliate links) only work on the deployed site, not under `hugo server` — a local 404 on one of those is expected.
 

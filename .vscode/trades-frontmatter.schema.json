@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Barechart - Trade front matter",
+  "title": "Clear Head Trading - Trade front matter",
   "description": "YAML front matter schema for trade pages (content/trades bundles). Provides types, descriptions and editor hints for VS Code YAML extension.",
   "type": "object",
   "properties": {

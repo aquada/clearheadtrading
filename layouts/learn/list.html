@@ -14,7 +14,7 @@
   <ol class="learn-topic-list">
     {{- range .Pages.ByWeight }}
     <li class="learn-topic-row{{ if ne .Params.status "published" }} learn-topic-stub{{ end }}">
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      {{ partial "learn_topic_icon.html" . }}<a href="{{ .Permalink }}">{{ .Title }}</a>
     </li>
     {{- end }}
   </ol>

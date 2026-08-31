@@ -24,6 +24,14 @@ Most jobs that cause burnout do it through sustained effort over long hours. Tra
 
 The clearest sign isn't exhaustion, it's a drop in decision quality that shows up despite putting in more hours, not fewer. Setups get taken later than the plan called for, or missed because focus has slipped, or held onto for longer out of a kind of flat resignation, not a real read on the market. Screen time starts to feel like dread or obligation instead of focus, and a session that used to end with a clear read on what happened now ends with a vague, tired blur of half-remembered trades.
 
+*Example: a trader who once closed each session with a confident one-line summary, "took two valid setups, one worked, sizing was correct," starts finishing sessions unable to say much beyond "it was a weird day." That shift, from a clear account of what happened to a foggy one, often shows up before the P&L does.*
+
+---
+
+## Prevention and recovery need different timelines
+
+Preventing burnout and recovering from it aren't the same task on the same timescale. Prevention is a standing structure: fixed session hours, real breaks built into the day, a hard stop when focus visibly slips, applied continuously instead of only reached for once things already feel wrong. Recovery, once burnout has properly set in, usually needs a longer, deliberate step back, days instead of one shortened session, because the judgement that's degraded doesn't reset overnight the way ordinary tiredness does. Treating burnout as something a single early finish fixes, when it's already reached the recovery stage, usually just delays noticing it hasn't improved.
+
 ---
 
 ## What fixes it
@@ -36,7 +44,8 @@ Pushing through with more hours or more discipline usually makes this worse, bec
 
 - Burnout is the point where more screen time costs more than it earns, not just ordinary tiredness
 - It directly damages the judgement trading depends on, not just enthusiasm for the work
-- The clearest sign is decision quality dropping despite more hours spent, not fewer
+- The clearest sign is decision quality dropping despite more hours spent, not fewer, often visible in a foggier post-session summary before the results even show it
+- Prevention is a standing daily structure; recovery from real burnout needs a longer, deliberate break, not just one shortened session
 - The fix is structural, fixed hours and real breaks, not pushing through with more effort
 
 ---

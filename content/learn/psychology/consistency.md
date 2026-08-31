@@ -20,6 +20,12 @@ Every strategy with a real edge still loses a meaningful share of the time, and 
 
 ---
 
+## Two traders, the same edge, different outcomes
+
+Picture two traders using the identical strategy with the identical statistical edge. One follows it precisely on every trade, entry, size, stop, target, regardless of how the last few went. The other follows it closely most of the time but quietly tightens the stop after a loss and lets a winner run past target when it's going well, small deviations that each feel reasonable in the moment. Over a hundred trades, the first trader's results track close to what the strategy's own statistics predict. The second trader's results drift somewhere else, not because the edge was different, but because the edge that was traded wasn't the one that got tested.
+
+---
+
 ## What consistency looks like day to day
 
 In practice it's less about willpower and more about repetition: the same criteria for an entry, the same risk per trade, the same process for deciding when to walk away, applied after three wins in a row the same way it's applied after three losses. It's not exciting, and it doesn't produce a good story after a single session, but it's what lets a real edge, if the strategy has one, show up in the results over enough trades for the maths to work in its favour.
@@ -35,6 +41,7 @@ The hardest version of this shows up after a loss, when the temptation is to add
 ## Key takeaways
 
 - One trade, win or lose, is far too small a sample to judge a strategy by
+- Two traders with the identical edge can post very different results purely based on how closely each one followed it
 - Consistency means applying the same entry, risk, and exit rules regardless of how recent trades went
 - Randomness alone produces winning and losing streaks on both good and bad strategies
 - Change a process because of a genuine flaw found through proper review, not because of the last result

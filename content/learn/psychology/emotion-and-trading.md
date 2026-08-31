@@ -24,6 +24,14 @@ A trade is a decision made under genuine uncertainty, with a number on the scree
 
 The entry itself is rarely where emotion does the damage, most traders can sit calmly in front of a chart and plan a trade before it's live. The cost shows up after the trade is open, when a small drawdown the plan already accounts for starts to feel like something that needs fixing right now: the stop gets moved further away "to give it room," or the position gets closed early on a normal wobble because watching it is uncomfortable, or a losing trade gets doubled down on because closing it at a loss feels like admitting a mistake. None of those are decisions the original plan called for. They're decisions the moment called for, and the moment is a worse trader than the plan is.
 
+*Example: a trade is planned with a stop 15 points below entry. Ten minutes in, price dips to 8 points below entry, well inside the planned range, and the trader moves the stop to 20 points "just in case," reasoning it's still a small loss either way. Price recovers, keeps falling, and the trade is stopped out at 20 points instead of the 15 the plan called for. The setup was fine. The 5 extra points lost belonged to the moved stop, not the market.*
+
+---
+
+## The physical signs arrive before the bad decision does
+
+Emotion overriding a plan rarely appears out of nowhere, it usually announces itself physically first: a tightening in the chest watching a position, the urge to check it every thirty seconds instead of leaving it alone, a faster pulse right before moving a stop or closing early. These signs show up before the actual bad decision gets made, which makes them useful, a trader who notices the urge to check a position obsessively has a moment to recognise what's happening before acting on it, instead of only recognising it afterward once the stop's already been moved.
+
 ---
 
 ## You can't remove the feeling, only the response
@@ -37,6 +45,7 @@ Trying to trade without feeling anything isn't a realistic goal, and traders who
 - The fast, real-time feedback of an open trade pulls on the brain's threat-and-reward response the same way a real emergency does
 - Emotion rarely damages the entry decision, it damages the decisions made after the trade is already open
 - Moving a stop, closing early on a normal wobble, or adding to a loser are usually emotional decisions dressed up as tactical ones
+- Physical signs, a tight chest, the urge to check constantly, usually arrive before the bad decision does and are worth noticing on their own
 - The goal isn't feeling nothing, it's writing the plan in advance so the in-the-moment version of you has less room to override it
 
 ---

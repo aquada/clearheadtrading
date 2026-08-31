@@ -20,11 +20,26 @@ Pilots and surgeons run checklists not because they don't know the steps, but be
 
 ---
 
-## What a good one covers
+## A worked example
 
-A useful checklist is short and specific: today's risk limit confirmed, the calendar checked, key levels marked, position size for today's account balance known before the first trade, and the platform's order type and instrument set correctly. It should also catch anything left over from before, an open position or a pending order from a previous session that shouldn't still be there.
+A checklist doesn't need to be elaborate to work. A version that covers the fundamentals:
 
-*Example: a trader who always checks account risk before the first trade skips it one morning because a setup appears the moment the platform loads. The trade uses yesterday's sizing, still in their head, which is now too large for today's smaller balance after a loss. The checklist exists specifically to catch this one skipped step, not to teach position sizing itself, that's covered elsewhere in this course.*
+> - [ ] Today's risk limit confirmed against current account balance
+> - [ ] Economic calendar checked for the instruments being traded
+> - [ ] Key levels marked (previous day's high/low, week open)
+> - [ ] Position size for today's first trade calculated in advance
+> - [ ] Correct instrument and order type selected on the platform
+> - [ ] No leftover open positions or pending orders from a previous session
+
+Six items, each one specific enough to be either done or not done, no room for a half-completed step to count as finished.
+
+*Example: a trader who always checks account risk before the first trade skips it one morning because a setup appears the moment the platform loads. The trade uses yesterday's sizing, still in their head, which is now too large for today's smaller balance after a loss. The checklist exists specifically to catch this one skipped step, not to teach position sizing itself, that's covered in [Position Sizing](/learn/risk-management/position-sizing/).*
+
+---
+
+## Building your own, not copying one
+
+A generic checklist is a reasonable starting point, but the version that earns its place on a desk gets built from real experience: a line added after a specific mistake revealed a gap the plan hadn't accounted for. A trader who once entered on the wrong instrument because two similar tickers sat next to each other on the platform adds "correct instrument selected" not because a template said to, but because it happened once and the checklist is there to make sure it doesn't happen twice. A checklist copied wholesale from somewhere else covers generic risks; a checklist built from a trader's own history covers their specific ones.
 
 ---
 
@@ -39,6 +54,7 @@ A checklist with twenty items doesn't get run, it gets skipped as a whole the fi
 - A checklist exists to catch a known step being skipped under pressure, not to teach anything new
 - The most confident trader in the room is often the one most likely to skip a step, believing it's beneath forgetting
 - A good checklist is short and specific: risk limit, calendar, key levels, sizing, platform setup, and nothing left over from before
+- The most useful items come from a trader's own past mistakes, not a generic template copied wholesale
 - A long checklist gets skipped as a whole; a short one that always runs is worth more than a thorough one that doesn't
 
 ---

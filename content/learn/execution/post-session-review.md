@@ -20,15 +20,29 @@ A losing trade taken to plan, correct setup, right size, stop where it belonged,
 
 ---
 
-## What goes in a proper review
+## A worked example
 
-A useful review checks which setups were taken and whether each one matched the plan's criteria, whether position sizing followed the rule, what the entry and exit were compared with what was planned, and one honest note on what, if anything, would be done differently. It doesn't need to be long. It needs to be specific enough to catch a real pattern instead of a vague feeling about how the day went.
+A review doesn't need to be long to be useful. For a single trade, five questions cover most of what matters:
+
+> - Did the setup match the plan's entry criteria, or was it a stretch?
+> - Was the size correct for today's account balance and risk rule?
+> - How did the actual entry and exit compare with what was planned?
+> - Did management, the stop, any partial exit, follow the plan or get adjusted in the moment?
+> - One honest note: what, if anything, would be done differently?
+
+None of these ask whether the trade won. That's deliberate, the outcome is already known and adds nothing further to the review.
 
 ---
 
-## Weekly patterns matter more than any single session
+## The metrics worth tracking
 
-A single session's review catches an individual lapse, a rule broken once, a setup taken outside criteria. Looking back across a week or a month is what reveals a repeating pattern no single day's review would show on its own, results consistently worse on a particular session time, a specific setup that underperforms its backtest, sizing that quietly creeps up after a good week. The daily review and the periodic one are checking for different things.
+Individual trade notes matter, but a small set of numbers tracked across many trades reveals patterns a single session can't show. Win rate on its own says little without knowing the average size of a win against the average loss, which is why win rate and average R multiple, the average result expressed as a multiple of risk, are usually read together instead of separately. Alongside those, the largest single win and largest single loss show whether results are being driven by a handful of outsized trades or by a real, repeatable process, and an adherence rate, the share of trades that matched the plan's criteria, catches a strategy that's technically profitable but being followed less and less closely over time.
+
+---
+
+## Daily vs weekly review, different questions
+
+A single session's review catches an individual lapse, a rule broken once, a setup taken outside criteria. Looking back across a week or a month is what reveals a repeating pattern no single day's review would show on its own, results consistently worse on a particular session time, a specific setup that underperforms its backtest, sizing that quietly creeps up after a good week. The daily review asks "did today follow the plan." The weekly or monthly one asks "is the plan itself still working," a different question that needs a larger sample to answer honestly.
 
 ---
 
@@ -36,7 +50,8 @@ A single session's review catches an individual lapse, a rule broken once, a set
 
 - Judge a trade by whether it matched the plan, not by whether it won or lost
 - A losing trade taken correctly is a process success; a winning trade taken outside the rules is a process failure that happened to pay off
-- A proper review checks setups taken, sizing, actual entry and exit versus planned, and one honest note on what to change
+- Five focused questions, none of them about the outcome, cover most of what a single-trade review needs
+- Win rate, average R multiple, largest win and loss, and adherence rate together show patterns a single session can't
 - Reviewing across a week or a month catches repeating patterns that a single session's review can't see on its own
 
 ---

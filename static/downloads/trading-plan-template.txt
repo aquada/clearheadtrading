@@ -1,0 +1,99 @@
+TRADING PLAN TEMPLATE
+Clear Head Trading — clearheadtrading.com/learn/execution/trading-plan/
+
+Fill in every field with a real, specific answer. If a field is hard to
+answer specifically, that's usually a sign the plan isn't ready yet, not
+a reason to leave it vague.
+
+------------------------------------------------------------------------
+1. GOALS AND MOTIVATION
+------------------------------------------------------------------------
+What this account is for, and over what timeframe:
+
+
+
+What "success" looks like in 12 months, in concrete terms (not just "make
+money"):
+
+
+
+------------------------------------------------------------------------
+2. TRADING STYLE AND SCHEDULE
+------------------------------------------------------------------------
+Style (day trading / swing trading / position trading):
+
+Sessions traded (e.g. London 08:00-11:30, or NY overlap):
+
+Days per week realistically available to trade:
+
+------------------------------------------------------------------------
+3. MARKETS AND INSTRUMENTS
+------------------------------------------------------------------------
+Instruments this plan covers (be specific, not "forex" or "indices"):
+
+Why these specific instruments (liquidity, familiarity, session fit):
+
+------------------------------------------------------------------------
+4. ENTRY CRITERIA
+------------------------------------------------------------------------
+The exact, objective conditions that make a setup valid:
+
+
+
+What does NOT count, even if it looks close:
+
+
+
+------------------------------------------------------------------------
+5. EXIT RULES — STOP AND TARGET
+------------------------------------------------------------------------
+Where the stop goes and why (structure, not a fixed pip count):
+
+Where the target comes from (fixed R multiple, next structural level,
+partial exits):
+
+------------------------------------------------------------------------
+6. POSITION SIZING AND RISK PER TRADE
+------------------------------------------------------------------------
+Risk per trade, as a percentage of account equity:
+
+How position size gets calculated from that percentage:
+
+------------------------------------------------------------------------
+7. DAILY AND WEEKLY LOSS LIMITS
+------------------------------------------------------------------------
+Daily loss limit (% of equity), and what happens when it's hit:
+
+Weekly loss limit, if different from 5x the daily number:
+
+Maximum trades per day:
+
+------------------------------------------------------------------------
+8. TRADE MANAGEMENT RULES
+------------------------------------------------------------------------
+When (if ever) the stop moves to breakeven:
+
+Partial exit rules, if any:
+
+------------------------------------------------------------------------
+9. RECORD-KEEPING AND REVIEW
+------------------------------------------------------------------------
+What gets logged after every trade:
+
+Review cadence (daily / weekly / monthly) and what each one checks:
+
+------------------------------------------------------------------------
+10. WHEN THIS PLAN DOES NOT APPLY
+------------------------------------------------------------------------
+Situations where no trade should be taken, regardless of setup quality
+(major scheduled news, illiquid hours, platform issues, others):
+
+
+
+------------------------------------------------------------------------
+This template is a starting structure, not financial advice. Fill it in
+with your own tested rules, not numbers that sound reasonable. See the
+full article at clearheadtrading.com/learn/execution/trading-plan/ for
+how to fill in the risk-related fields properly, with links to the
+relevant lessons on position sizing, stop placement, and loss limits.
+------------------------------------------------------------------------

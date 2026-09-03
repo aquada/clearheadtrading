@@ -409,3 +409,69 @@ figure.illustration.float-right {
     color: var(--secondary);
     margin-top: 2rem;
 }
+
+/* ── Contact form ─────────────────────────────────────────────────── */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    margin-top: 1.5rem;
+    max-width: 32rem;
+}
+
+.contact-hp {
+    position: absolute;
+    left: -9999px;
+}
+
+.contact-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.contact-field label {
+    font-size: 0.85em;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.contact-field input,
+.contact-field select,
+.contact-field textarea {
+    font: inherit;
+    font-size: 0.95em;
+    color: var(--content);
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.55rem 0.75rem;
+}
+
+.contact-field input:focus,
+.contact-field select:focus,
+.contact-field textarea:focus {
+    outline: 2px solid #C96442;
+    outline-offset: 1px;
+}
+
+.contact-field textarea {
+    resize: vertical;
+}
+
+.contact-submit {
+    align-self: flex-start;
+    font: inherit;
+    font-weight: 600;
+    font-size: 0.95em;
+    color: #fff;
+    background: #C96442;
+    border: none;
+    border-radius: var(--radius);
+    padding: 0.6rem 1.4rem;
+    cursor: pointer;
+}
+
+.contact-submit:hover {
+    opacity: 0.85;
+}

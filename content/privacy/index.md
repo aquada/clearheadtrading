@@ -26,4 +26,4 @@ You can block or delete cookies at any time through your browser settings. Doing
 
 ## Contact
 
-Questions about this policy — [email me](/#contact).
+Questions about this policy — [get in touch](/contact/).

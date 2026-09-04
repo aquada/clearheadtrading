@@ -581,12 +581,15 @@
     background: var(--entry);
     border-top: 1px solid var(--border);
     padding: 0.75rem 1rem;
-    display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
     flex-wrap: wrap;
     z-index: 100;
+  }
+
+  .bk-compare-bar:not([hidden]) {
+    display: flex;
   }
 
   .bk-compare-slots {
@@ -768,6 +771,12 @@
   .bk-compare-table td.bk-compare-notes-cell {
     white-space: normal;
     max-width: 220px;
+    vertical-align: top;
+  }
+
+  .bk-compare-table td.bk-compare-wrap-cell {
+    white-space: normal;
+    max-width: 260px;
     vertical-align: top;
   }
 
@@ -1263,11 +1272,11 @@
     { label: 'Our rating', kind: 'rating' },
     { label: 'Trust score', kind: 'trust', metricKind: 'trust', value: function (b) { return b.trustScore; } },
     { label: 'Cost', kind: 'cost', metricKind: 'cost', value: function (b) { return costOf(b); } },
-    { label: 'Regulation', kind: 'regulation' },
-    { label: 'Accounts', kind: 'accounts' },
+    { label: 'Regulation', kind: 'regulation', wrap: true },
+    { label: 'Accounts', kind: 'accounts', wrap: true },
     { label: 'Min deposit', kind: 'minDeposit' },
     { label: 'Execution type', kind: 'executionType' },
-    { label: 'Leverage', kind: 'leverage' },
+    { label: 'Leverage', kind: 'leverage', wrap: true },
     { label: 'MT4', kind: 'mt4' },
     { label: 'MT5', kind: 'mt5' },
     { label: 'cTrader', kind: 'ctrader' },
@@ -1298,8 +1307,10 @@
 
     var body = COMPARE_ROWS.map(function (row) {
       return '<tr><th class="bk-compare-row-label">' + row.label + '</th>' + brokers.map(function (b) {
-        var cls = row.metricKind ? metricClass(row.metricKind, row.value(b)) : '';
-        return '<td class="' + (cls ? 'bk-metric-cell ' + cls : '') + '">' + compareRowValue(row.kind, b) + '</td>';
+        var classes = [];
+        if (row.metricKind) classes.push('bk-metric-cell', metricClass(row.metricKind, row.value(b)));
+        if (row.wrap) classes.push('bk-compare-wrap-cell');
+        return '<td class="' + classes.join(' ') + '">' + compareRowValue(row.kind, b) + '</td>';
       }).join('') + '</tr>';
     }).join('');
 

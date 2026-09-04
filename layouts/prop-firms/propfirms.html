@@ -614,12 +614,15 @@
     background: var(--entry);
     border-top: 1px solid var(--border);
     padding: 0.75rem 1rem;
-    display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
     flex-wrap: wrap;
     z-index: 100;
+  }
+
+  .pf-compare-bar:not([hidden]) {
+    display: flex;
   }
 
   .pf-compare-slots {

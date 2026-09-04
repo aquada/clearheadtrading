@@ -475,3 +475,214 @@ figure.illustration.float-right {
 .contact-submit:hover {
     opacity: 0.85;
 }
+
+/* ── CHT Journal landing page ────────────────────────────────────── */
+.journal-hero {
+    text-align: center;
+    max-width: 42rem;
+    margin: 0 auto 1rem;
+}
+
+.journal-kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.8em;
+    font-weight: 600;
+    color: #C96442;
+    margin-bottom: 0.4em;
+}
+
+.journal-hero h1 {
+    font-size: 2em;
+    line-height: 1.25;
+    margin-top: 0;
+    margin-bottom: 0.6em;
+    color: var(--primary);
+}
+
+.journal-hero-sub {
+    color: var(--secondary);
+    margin-bottom: 1.6rem;
+}
+
+.journal-cta-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.journal-cta {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 0.95em;
+    border-radius: var(--radius);
+    padding: 0.65rem 1.6rem;
+    text-decoration: none;
+}
+
+.journal-cta-primary {
+    background: #C96442;
+    color: #fff;
+}
+
+.journal-cta-primary:hover {
+    opacity: 0.85;
+}
+
+.journal-cta-secondary {
+    background: var(--entry);
+    color: var(--primary);
+    border: 1px solid var(--border);
+}
+
+.journal-cta-secondary:hover {
+    border-color: #C96442;
+    color: #C96442;
+}
+
+.journal-diff-grid,
+.journal-pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1.2rem;
+}
+
+.journal-diff-card,
+.journal-pricing-tier {
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.4rem;
+}
+
+.journal-diff-card h3,
+.journal-pricing-tier h3 {
+    margin-top: 0;
+}
+
+.journal-pricing-tier-paid {
+    border-color: #C96442;
+}
+
+.journal-gallery figure {
+    margin: 0;
+}
+
+.journal-gallery img {
+    display: block;
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    cursor: zoom-in;
+}
+
+.journal-gallery img:hover,
+.journal-gallery img:focus-visible {
+    border-color: #C96442;
+}
+
+.journal-gallery figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.85em;
+    color: var(--secondary);
+    text-align: center;
+}
+
+.journal-gallery-hero {
+    max-width: 42rem;
+    margin: 0 auto 1.5rem;
+}
+
+.journal-gallery-hero figcaption {
+    font-size: 0.95em;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.journal-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1.5rem;
+}
+
+/* ── CHT Journal screenshot lightbox ─────────────────────────────── */
+.journal-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 3rem 1rem;
+}
+
+.journal-lightbox:not([hidden]) {
+    display: flex;
+}
+
+.journal-lightbox-img {
+    max-width: min(90vw, 60rem);
+    max-height: 78vh;
+    border-radius: var(--radius);
+}
+
+.journal-lightbox-caption {
+    color: #fff;
+    font-size: 0.9em;
+    text-align: center;
+    margin: 0;
+    max-width: 40rem;
+}
+
+.journal-lightbox-close,
+.journal-lightbox-prev,
+.journal-lightbox-next {
+    position: fixed;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 1.4em;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.journal-lightbox-close:hover,
+.journal-lightbox-prev:hover,
+.journal-lightbox-next:hover {
+    background: #C96442;
+    border-color: #C96442;
+}
+
+.journal-lightbox-close {
+    top: 1.25rem;
+    right: 1.25rem;
+}
+
+.journal-lightbox-prev {
+    left: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.journal-lightbox-next {
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 640px) {
+    .journal-lightbox-prev,
+    .journal-lightbox-next {
+        width: 2.25rem;
+        height: 2.25rem;
+        font-size: 1.2em;
+    }
+    .journal-lightbox-prev { left: 0.5rem; }
+    .journal-lightbox-next { right: 0.5rem; }
+}

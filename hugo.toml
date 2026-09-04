@@ -66,6 +66,10 @@ googleAnalytics = "G-PEDMYR1V0K"
   #   url = "/shop/"
   #   weight = 40
   [[menu.main]]
+    name = "Journal"
+    url = "/journal/"
+    weight = 45
+  [[menu.main]]
     name = "Services"
     url = "/services/"
     weight = 50

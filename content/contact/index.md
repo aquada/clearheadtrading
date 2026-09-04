@@ -30,6 +30,7 @@ Whether you're after custom EA work, spotted something wrong on the site, or jus
     <select id="contact-reason" name="reason">
       <option value="EA development">Custom EA / indicator development</option>
       <option value="Prop firms or brokers">Prop firms or brokers tool</option>
+      <option value="Journal feedback">CHT Journal feedback</option>
       <option value="Site feedback">Site feedback or a correction</option>
       <option value="Something else">Something else</option>
     </select>
@@ -42,3 +43,21 @@ Whether you're after custom EA work, spotted something wrong on the site, or jus
 
   <button type="submit" class="contact-submit">Send message</button>
 </form>
+
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var from = params.get("from");
+  if (!from || from.indexOf("journal:") !== 0) return;
+
+  var page = from.slice("journal:".length);
+  var reason = document.getElementById("contact-reason");
+  var message = document.getElementById("contact-message");
+
+  if (reason) reason.value = "Journal feedback";
+  if (message && !message.value) {
+    message.value = "Feedback from CHT Journal (" + page + "):\n\n";
+    message.setSelectionRange(message.value.length, message.value.length);
+  }
+})();
+</script>

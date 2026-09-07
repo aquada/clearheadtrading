@@ -41,7 +41,15 @@ Log emotion and confidence next to the trade itself, and it stops being a vague 
 
 ### Full analytics on the free tier
 
-The whole Dashboard, Stats, and review system come with the free tier — no stripped-down demo. Paid adds EA auto-sync and prop firm challenge tracking, but the behavioural analytics are there from the first trade you log, not held back until you upgrade.
+The whole Dashboard, Stats, and review system come with the free tier — no stripped-down demo. Paid adds EA auto-sync, but the behavioural analytics are there from the first trade you log, not held back until you upgrade.
+
+</div>
+
+<div class="journal-diff-card">
+
+### Prop firm challenges, tracked properly
+
+Run multiple challenges at once, tag trades to whichever one applies, and watch a live progress bar move against your [profit target](/learn/risk-management/prop-firm-risk-rules/) as trades close. Daily loss and max drawdown limits sit on the card for reference, though the app doesn't flag a breach itself yet. Free tier, permanently, same as everything else here.
 
 </div>
 
@@ -90,6 +98,11 @@ Click any screenshot to view it full size — the lightbox scrolls through the w
 <figure>
   <img src="/images/journal/stats-breakdowns.jpg" alt="CHT Journal Stats page showing R breakdowns by setup and instrument" tabindex="0" role="button">
   <figcaption>Your edge, broken down by setup and instrument.</figcaption>
+</figure>
+
+<figure>
+  <img src="/images/journal/prop-firm-challenge-tracker.jpg" alt="CHT Journal prop firm challenge card for an active FTMO challenge, showing 38% progress to profit target, a $100,000 starting balance, a 5% daily loss limit, and a 10% max drawdown" tabindex="0" role="button">
+  <figcaption>An active challenge, tracked alongside your regular trading.</figcaption>
 </figure>
 
 <figure>
@@ -172,7 +185,7 @@ Click any screenshot to view it full size — the lightbox scrolls through the w
 
 ### Free
 
-Manual and CSV/MT4 import logging, the full Dashboard and Stats suite, per-trade and period reviews, guardrails, and the leaderboard.
+Manual and CSV/MT4 import logging, the full Dashboard and Stats suite, per-trade and period reviews, guardrails, prop firm challenge tracking, and the leaderboard.
 
 </div>
 
@@ -180,7 +193,7 @@ Manual and CSV/MT4 import logging, the full Dashboard and Stats suite, per-trade
 
 ### Paid — $12/mo
 
-Everything in Free, plus EA auto-sync from MT4/MT5 and prop firm challenge tracking.
+Everything in Free, plus EA auto-sync from MT4/MT5.
 
 </div>
 

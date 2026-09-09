@@ -33,7 +33,7 @@ a:hover { color: #A84F32; }
     line-height: 1.2;
     margin-top: 0;
     margin-bottom: 0.6em;
-    color: var(--primary);
+    color: #C96442;
 }
 
 /* ── Fonts ─────────────────────────────────────────────────────── */
@@ -471,7 +471,22 @@ figure.illustration.float-right {
     line-height: 1.25;
     margin-top: 0;
     margin-bottom: 0.6em;
-    color: var(--primary);
+    color: #C96442;
+}
+
+/* Every heading on the Journal landing page, including the plain
+   "## Why it's different" / "## Pricing" section titles further down
+   the markdown, not just the hero - scoped with :has() so no extra
+   markup is needed just to tag this page. */
+.post-content:has(.journal-hero) h2,
+.post-content:has(.journal-hero) h3 {
+    color: #C96442;
+}
+
+/* The auto-generated page title ("CHT Journal") above the hero is a
+   separate h1 outside .post-content - same treatment for consistency. */
+body:has(.journal-hero) .page-header h1 {
+    color: #C96442;
 }
 
 .journal-hero-sub {
@@ -687,7 +702,9 @@ figure.illustration.float-right {
        header's top edge (full overlap) without making either one
        fixed. */
     margin-top: calc(-1 * (var(--header-height) + var(--gap)));
-    padding: calc(var(--header-height) + var(--gap) + 4rem) 0 4rem;
+    min-height: 34rem;
+    display: flex;
+    align-items: center;
 }
 
 .cht-photo-bg {
@@ -701,6 +718,7 @@ figure.illustration.float-right {
 .hero-inner {
     /* Mirrors .header-nav's own centering so the card lines up under
        the logo instead of centering across the full-bleed photo. */
+    width: 100%;
     max-width: calc(var(--nav-width) + var(--gap) * 2);
     margin: 0 auto;
     padding: 0 var(--gap);
@@ -735,12 +753,14 @@ figure.illustration.float-right {
     padding: 3rem var(--gap) 1rem;
 }
 
+.cht-find-section h2 {
+    color: #C96442;
+}
+
 /* ── "What you'll find here" cards ────────────────────────────────
-   Each item gets its own tinted card instead of sitting in one plain
-   list. The tint is the section's accent colour mixed into whatever
-   --entry currently resolves to (cream in light mode, grey in dark),
-   so cards stay in harmony with the theme automatically rather than
-   using fixed hex backgrounds. */
+   One consistent outline per card (no fill) and the site's one
+   accent colour for every title/icon - same treatment for all six,
+   including Journal, instead of a different tint per item. */
 .find-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -749,28 +769,15 @@ figure.illustration.float-right {
 }
 
 .find-card {
-    --find-accent: var(--secondary);
-    background: color-mix(in srgb, var(--find-accent) 12%, var(--entry));
-    border: 1px solid color-mix(in srgb, var(--find-accent) 30%, transparent);
+    border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 1.5rem 1.75rem;
 }
 
-[data-theme="dark"] .find-card {
-    background: color-mix(in srgb, var(--find-accent) 20%, var(--entry));
-}
-
 .find-card .find-here-icon,
 .find-card strong a {
-    color: var(--find-accent);
+    color: #C96442;
 }
-
-.find-card--blog { --find-accent: #c96442; }
-.find-card--tools { --find-accent: #a9822f; }
-.find-card--propfirms { --find-accent: #5f7d52; }
-.find-card--brokers { --find-accent: #4f7089; }
-.find-card--journal { --find-accent: #8a4a73; }
-.find-card--services { --find-accent: #6b5e52; }
 
 /* The header overlaps the photo (transparent/frosted) only on pages
    with a photo backdrop, and only for as long as the hero is behind

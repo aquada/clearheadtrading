@@ -4,9 +4,10 @@ description: "Trading blog, tools, EAs and custom MT5 development for systematic
 ---
 
 <div class="cht-photo-page">
-<div class="cht-photo-bg"></div>
 
 <div class="hero-section">
+<div class="cht-photo-bg"></div>
+<div class="hero-inner">
 <div class="hero-card">
 
 # Clear chart. Clear head. Better decisions.
@@ -17,6 +18,7 @@ Clear Head Trading is built around the opposite idea — strip the chart back to
 
 I trade live, every day, London and New York Open. This is what I use, what I build, and what I write about.
 
+</div>
 </div>
 </div>
 

@@ -662,31 +662,53 @@ figure.illustration.float-right {
 }
 
 /* ── Homepage photo backdrop ──────────────────────────────────────
-   Fixed photo behind the whole homepage, hero copy on a frosted card
-   instead of a text shadow/scrim on the photo itself - a scrim/glow
-   approach was tried and rejected (illegible on some photos, disliked
-   on others). The card's own translucency does the contrast work,
-   independent of what's behind it. */
+   The photo lives ONLY behind the header + hero - not pinned, not
+   covering the rest of the page. It scrolls away with the hero like
+   any other background image; everything below (What you'll find
+   here, etc.) is the site's normal solid background, no photo.
+   Hero copy sits on a frosted card rather than a text shadow/scrim on
+   the photo itself - a scrim/glow approach was tried and rejected
+   (illegible on some photos, disliked on others). */
 .cht-photo-page {
     position: relative;
 }
 
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    /* Break out of .main's centered content column so the photo runs
+       edge-to-edge like the header bar above it, not boxed into the
+       narrow text column. */
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    /* Pulls the hero up by the header's own height, cancelling out
+       .main's top padding too, so the photo starts exactly at the
+       header's top edge (full overlap) without making either one
+       fixed. */
+    margin-top: calc(-1 * (var(--header-height) + var(--gap)));
+    padding: calc(var(--header-height) + var(--gap) + 4rem) 0 4rem;
+}
+
 .cht-photo-bg {
-    position: fixed;
+    position: absolute;
     inset: 0;
     z-index: 0;
     background: url('/images/homepage-hero.jpg') center center / cover no-repeat;
     pointer-events: none;
 }
 
-.hero-section {
-    position: relative;
-    z-index: 1;
-    display: block;
-    padding: 4rem 0;
+.hero-inner {
+    /* Mirrors .header-nav's own centering so the card lines up under
+       the logo instead of centering across the full-bleed photo. */
+    max-width: calc(var(--nav-width) + var(--gap) * 2);
+    margin: 0 auto;
+    padding: 0 var(--gap);
 }
 
 .hero-card {
+    position: relative;
+    z-index: 1;
     max-width: 34rem;
     background: color-mix(in srgb, var(--entry) 40%, transparent);
     -webkit-backdrop-filter: blur(32px);
@@ -707,35 +729,28 @@ figure.illustration.float-right {
 }
 
 .cht-find-section {
-    position: relative;
-    z-index: 1;
     background: var(--theme);
     border-top: 1px solid var(--border);
     margin: 0 calc(-1 * var(--gap));
     padding: 3rem var(--gap) 1rem;
 }
 
-/* The header only goes fixed/frosted on pages with a photo backdrop -
-   everywhere else it stays the theme's normal static header. */
+/* The header overlaps the photo (transparent/frosted) only on pages
+   with a photo backdrop, and only for as long as the hero is behind
+   it - it stays in normal document flow (not fixed) and scrolls away
+   with the rest of the page like everything else here. */
 body:has(.cht-photo-page) .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    background: color-mix(in srgb, var(--theme) 55%, transparent);
+    position: relative;
+    z-index: 2;
+    background: color-mix(in srgb, var(--theme) 30%, transparent);
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
 }
 
 [data-theme="dark"] body:has(.cht-photo-page) .header {
-    background: color-mix(in srgb, var(--theme) 70%, transparent);
+    background: color-mix(in srgb, var(--theme) 45%, transparent);
     border-bottom-color: rgba(255, 255, 255, 0.08);
-}
-
-body:has(.cht-photo-page) .main {
-    padding-top: var(--header-height);
 }
 
 @media (max-width: 600px) {

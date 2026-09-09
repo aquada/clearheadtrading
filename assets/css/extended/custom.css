@@ -28,38 +28,12 @@ a:hover { color: #A84F32; }
 }
 
 /* ── Homepage hero ─────────────────────────────────────────────── */
-.hero-section {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 1.5rem;
-}
-
-.hero-text {
-    flex: 1;
-}
-
-.hero-mascot {
-    width: 180px;
-    flex-shrink: 0;
-}
-
-.hero-text h1 {
+.hero-card h1 {
     font-size: 2.2em;
     line-height: 1.2;
     margin-top: 0;
     margin-bottom: 0.6em;
     color: var(--primary);
-}
-
-@media (max-width: 600px) {
-    .hero-section {
-        flex-direction: column;
-        align-items: center;
-    }
-    .hero-mascot {
-        width: 130px;
-    }
 }
 
 /* ── Fonts ─────────────────────────────────────────────────────── */
@@ -685,4 +659,88 @@ figure.illustration.float-right {
     }
     .journal-lightbox-prev { left: 0.5rem; }
     .journal-lightbox-next { right: 0.5rem; }
+}
+
+/* ── Homepage photo backdrop ──────────────────────────────────────
+   Fixed photo behind the whole homepage, hero copy on a frosted card
+   instead of a text shadow/scrim on the photo itself - a scrim/glow
+   approach was tried and rejected (illegible on some photos, disliked
+   on others). The card's own translucency does the contrast work,
+   independent of what's behind it. */
+.cht-photo-page {
+    position: relative;
+}
+
+.cht-photo-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background: url('/images/homepage-hero.jpg') center center / cover no-repeat;
+    pointer-events: none;
+}
+
+.hero-section {
+    position: relative;
+    z-index: 1;
+    display: block;
+    padding: 4rem 0;
+}
+
+.hero-card {
+    max-width: 34rem;
+    background: color-mix(in srgb, var(--entry) 40%, transparent);
+    -webkit-backdrop-filter: blur(32px);
+    backdrop-filter: blur(32px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: var(--radius);
+    padding: 2.75rem 3rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* Dark mode needs a much higher opacity than light mode to actually
+   read as dark against a bright photo - the same alpha lightens a
+   bright photo far more than it darkens one, so light text loses
+   contrast unless dark mode gets real extra coverage here. */
+[data-theme="dark"] .hero-card {
+    background: color-mix(in srgb, var(--entry) 78%, transparent);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.cht-find-section {
+    position: relative;
+    z-index: 1;
+    background: var(--theme);
+    border-top: 1px solid var(--border);
+    margin: 0 calc(-1 * var(--gap));
+    padding: 3rem var(--gap) 1rem;
+}
+
+/* The header only goes fixed/frosted on pages with a photo backdrop -
+   everywhere else it stays the theme's normal static header. */
+body:has(.cht-photo-page) .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: color-mix(in srgb, var(--theme) 55%, transparent);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+[data-theme="dark"] body:has(.cht-photo-page) .header {
+    background: color-mix(in srgb, var(--theme) 70%, transparent);
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+body:has(.cht-photo-page) .main {
+    padding-top: var(--header-height);
+}
+
+@media (max-width: 600px) {
+    .hero-card {
+        padding: 2rem 1.75rem;
+        margin: 0 1rem;
+    }
 }

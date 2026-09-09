@@ -3,8 +3,11 @@ title: "Clear Head Trading"
 description: "Trading blog, tools, EAs and custom MT5 development for systematic traders."
 ---
 
+<div class="cht-photo-page">
+<div class="cht-photo-bg"></div>
+
 <div class="hero-section">
-<div class="hero-text">
+<div class="hero-card">
 
 # Clear chart. Clear head. Better decisions.
 
@@ -15,10 +18,9 @@ Clear Head Trading is built around the opposite idea — strip the chart back to
 I trade live, every day, London and New York Open. This is what I use, what I build, and what I write about.
 
 </div>
-<img src="/images/naked_candle.png" alt="Clear Head Trading mascot" class="hero-mascot">
 </div>
 
----
+<div class="cht-find-section">
 
 ## What you'll find here
 
@@ -36,3 +38,6 @@ Compare forex/CFD brokers — filter by regulation, spreads, commission, and EA/
 
 <svg class="find-here-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>**[Services →](/services)**
 Custom MT5 development — EAs, performance dashboards, and prop firm compliance tools built around your rules and logic. [Get in touch](/contact/).
+
+</div>
+</div>

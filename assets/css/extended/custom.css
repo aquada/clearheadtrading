@@ -735,6 +735,43 @@ figure.illustration.float-right {
     padding: 3rem var(--gap) 1rem;
 }
 
+/* ── "What you'll find here" cards ────────────────────────────────
+   Each item gets its own tinted card instead of sitting in one plain
+   list. The tint is the section's accent colour mixed into whatever
+   --entry currently resolves to (cream in light mode, grey in dark),
+   so cards stay in harmony with the theme automatically rather than
+   using fixed hex backgrounds. */
+.find-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.find-card {
+    --find-accent: var(--secondary);
+    background: color-mix(in srgb, var(--find-accent) 12%, var(--entry));
+    border: 1px solid color-mix(in srgb, var(--find-accent) 30%, transparent);
+    border-radius: var(--radius);
+    padding: 1.5rem 1.75rem;
+}
+
+[data-theme="dark"] .find-card {
+    background: color-mix(in srgb, var(--find-accent) 20%, var(--entry));
+}
+
+.find-card .find-here-icon,
+.find-card strong a {
+    color: var(--find-accent);
+}
+
+.find-card--blog { --find-accent: #c96442; }
+.find-card--tools { --find-accent: #a9822f; }
+.find-card--propfirms { --find-accent: #5f7d52; }
+.find-card--brokers { --find-accent: #4f7089; }
+.find-card--journal { --find-accent: #8a4a73; }
+.find-card--services { --find-accent: #6b5e52; }
+
 /* The header overlaps the photo (transparent/frosted) only on pages
    with a photo backdrop, and only for as long as the hero is behind
    it - it stays in normal document flow (not fixed) and scrolls away

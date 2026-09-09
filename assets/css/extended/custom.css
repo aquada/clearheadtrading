@@ -28,12 +28,38 @@ a:hover { color: #A84F32; }
 }
 
 /* ── Homepage hero ─────────────────────────────────────────────── */
-.hero-card h1 {
+.hero-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-mascot {
+    width: 180px;
+    flex-shrink: 0;
+}
+
+.hero-text h1 {
     font-size: 2.2em;
     line-height: 1.2;
     margin-top: 0;
     margin-bottom: 0.6em;
-    color: #C96442;
+    color: var(--primary);
+}
+
+@media (max-width: 600px) {
+    .hero-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-mascot {
+        width: 130px;
+    }
 }
 
 /* ── Fonts ─────────────────────────────────────────────────────── */
@@ -471,22 +497,7 @@ figure.illustration.float-right {
     line-height: 1.25;
     margin-top: 0;
     margin-bottom: 0.6em;
-    color: #C96442;
-}
-
-/* Every heading on the Journal landing page, including the plain
-   "## Why it's different" / "## Pricing" section titles further down
-   the markdown, not just the hero - scoped with :has() so no extra
-   markup is needed just to tag this page. */
-.post-content:has(.journal-hero) h2,
-.post-content:has(.journal-hero) h3 {
-    color: #C96442;
-}
-
-/* The auto-generated page title ("CHT Journal") above the hero is a
-   separate h1 outside .post-content - same treatment for consistency. */
-body:has(.journal-hero) .page-header h1 {
-    color: #C96442;
+    color: var(--primary);
 }
 
 .journal-hero-sub {
@@ -674,132 +685,4 @@ body:has(.journal-hero) .page-header h1 {
     }
     .journal-lightbox-prev { left: 0.5rem; }
     .journal-lightbox-next { right: 0.5rem; }
-}
-
-/* ── Homepage photo backdrop ──────────────────────────────────────
-   The photo lives ONLY behind the header + hero - not pinned, not
-   covering the rest of the page. It scrolls away with the hero like
-   any other background image; everything below (What you'll find
-   here, etc.) is the site's normal solid background, no photo.
-   Hero copy sits on a frosted card rather than a text shadow/scrim on
-   the photo itself - a scrim/glow approach was tried and rejected
-   (illegible on some photos, disliked on others). */
-.cht-photo-page {
-    position: relative;
-}
-
-.hero-section {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    /* Break out of .main's centered content column so the photo runs
-       edge-to-edge like the header bar above it, not boxed into the
-       narrow text column. */
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    /* Pulls the hero up by the header's own height, cancelling out
-       .main's top padding too, so the photo starts exactly at the
-       header's top edge (full overlap) without making either one
-       fixed. */
-    margin-top: calc(-1 * (var(--header-height) + var(--gap)));
-    min-height: 34rem;
-    display: flex;
-    align-items: center;
-}
-
-.cht-photo-bg {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    background: url('/images/homepage-hero.jpg') center center / cover no-repeat;
-    pointer-events: none;
-}
-
-.hero-inner {
-    /* Mirrors .header-nav's own centering so the card lines up under
-       the logo instead of centering across the full-bleed photo. */
-    width: 100%;
-    max-width: calc(var(--nav-width) + var(--gap) * 2);
-    margin: 0 auto;
-    padding: 0 var(--gap);
-}
-
-.hero-card {
-    position: relative;
-    z-index: 1;
-    max-width: 34rem;
-    background: color-mix(in srgb, var(--entry) 40%, transparent);
-    -webkit-backdrop-filter: blur(32px);
-    backdrop-filter: blur(32px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: var(--radius);
-    padding: 2.75rem 3rem;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
-}
-
-/* Dark mode needs a much higher opacity than light mode to actually
-   read as dark against a bright photo - the same alpha lightens a
-   bright photo far more than it darkens one, so light text loses
-   contrast unless dark mode gets real extra coverage here. */
-[data-theme="dark"] .hero-card {
-    background: color-mix(in srgb, var(--entry) 78%, transparent);
-    border-color: rgba(255, 255, 255, 0.1);
-}
-
-.cht-find-section {
-    background: var(--theme);
-    border-top: 1px solid var(--border);
-    margin: 0 calc(-1 * var(--gap));
-    padding: 3rem var(--gap) 1rem;
-}
-
-.cht-find-section h2 {
-    color: #C96442;
-}
-
-/* ── "What you'll find here" cards ────────────────────────────────
-   One consistent outline per card (no fill) and the site's one
-   accent colour for every title/icon - same treatment for all six,
-   including Journal, instead of a different tint per item. */
-.find-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.25rem;
-    margin-top: 1.5rem;
-}
-
-.find-card {
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1.5rem 1.75rem;
-}
-
-.find-card .find-here-icon,
-.find-card strong a {
-    color: #C96442;
-}
-
-/* The header overlaps the photo (transparent/frosted) only on pages
-   with a photo backdrop, and only for as long as the hero is behind
-   it - it stays in normal document flow (not fixed) and scrolls away
-   with the rest of the page like everything else here. */
-body:has(.cht-photo-page) .header {
-    position: relative;
-    z-index: 2;
-    background: color-mix(in srgb, var(--theme) 30%, transparent);
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
-}
-
-[data-theme="dark"] body:has(.cht-photo-page) .header {
-    background: color-mix(in srgb, var(--theme) 45%, transparent);
-    border-bottom-color: rgba(255, 255, 255, 0.08);
-}
-
-@media (max-width: 600px) {
-    .hero-card {
-        padding: 2rem 1.75rem;
-        margin: 0 1rem;
-    }
 }

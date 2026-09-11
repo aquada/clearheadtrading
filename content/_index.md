@@ -1,26 +1,16 @@
 ---
 title: "Clear Head Trading"
 description: "Trading blog, tools, EAs and custom MT5 development for systematic traders."
+heroPhrases:
+  - "Clear chart"
+  - "Clear head"
+  - "Better decisions"
+heroTextLeft:
+  - "Most traders have too much on their chart. Conflicting signals, indicator soup, setups that look different every time you look at them."
+heroTextRight:
+  - "Clear Head Trading is built around the opposite idea — strip the chart back to what actually works, then execute it the same way, every session."
+  - "I trade live, every day, London and New York Open. This is what I use, what I build, and what I write about."
 ---
-
-<div class="cht-photo-page">
-
-<div class="hero-section">
-<div class="cht-photo-bg"></div>
-<div class="hero-inner">
-<div class="hero-card">
-
-# Clear chart. Clear head. Better decisions.
-
-Most traders have too much on their chart. Conflicting signals, indicator soup, setups that look different every time you look at them.
-
-Clear Head Trading is built around the opposite idea — strip the chart back to what actually works, then execute it the same way, every session.
-
-I trade live, every day, London and New York Open. This is what I use, what I build, and what I write about.
-
-</div>
-</div>
-</div>
 
 <div class="cht-find-section">
 
@@ -72,5 +62,4 @@ Custom MT5 development — EAs, performance dashboards, and prop firm compliance
 
 </div>
 
-</div>
 </div>

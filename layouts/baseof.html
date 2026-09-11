@@ -1,0 +1,61 @@
+{{- if lt hugo.Version "0.146.0" }}
+{{- errorf "=> hugo v0.146.0 or greater is required for hugo-PaperMod to build " }}
+{{- end -}}
+
+<!DOCTYPE html>
+{{- $theme := site.Params.defaultTheme | default "auto" }}
+{{- if eq $theme "dark" }}
+<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}" data-theme="dark">
+{{- else if eq $theme "light" }}
+<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}" data-theme="light">
+{{- else }}
+<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}" data-theme="auto">
+{{- end }}
+
+<head>
+    {{- partial "head.html" . }}
+</head>
+
+{{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) }}
+<body class="list" id="top">
+{{- else }}
+<body id="top">
+{{- end }}
+    {{ partialCached "header.html" . .Page -}}
+    <div class="hero-section" id="hero-section">
+        <div class="cht-photo-bg"></div>
+        {{- if and .IsHome .Params.heroPhrases }}
+        <h1 class="hero-headline">
+            {{- range $i, $phrase := .Params.heroPhrases }}
+            {{- if gt $i 0 }}<span class="hero-dot hero-dot-{{ $i }}">&middot;</span>{{- end }}
+            <span class="hero-phrase hero-phrase-{{ mod $i 3 }}">{{ $phrase }}</span>
+            {{- end }}
+        </h1>
+        <div class="hero-subtext hero-subtext-left">
+            {{- range .Params.heroTextLeft }}
+            <p>{{ . }}</p>
+            {{- end }}
+        </div>
+        <div class="hero-subtext hero-subtext-right">
+            {{- range .Params.heroTextRight }}
+            <p>{{ . }}</p>
+            {{- end }}
+        </div>
+        <script>
+            (function () {
+                var section = document.getElementById('hero-section');
+                if (!section) return;
+                requestAnimationFrame(function () {
+                    requestAnimationFrame(function () { section.classList.add('run'); });
+                });
+            })();
+        </script>
+        {{- end }}
+    </div>
+    <main class="main">
+        {{- block "main" . }}{{ end }}
+    </main>
+    {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
+</body>
+
+</html>

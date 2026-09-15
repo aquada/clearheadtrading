@@ -679,7 +679,14 @@ figure.illustration.float-right {
     position: absolute;
     inset: 0;
     z-index: 0;
-    background: url('/images/homepage-hero.jpg') center top / cover no-repeat;
+    /* The balloon sits at ~63% across the photo, not dead centre. On a
+       tall, narrow box `cover` scales to match height and crops the
+       sides - centred on 50% that crop cut the balloon in half on
+       narrow phones. Anchoring the crop on the balloon's own position
+       instead keeps it in frame. Wide viewports never crop
+       horizontally at all (they're width-constrained), so this has no
+       effect there - checked the numbers, not just eyeballed. */
+    background: url('/images/homepage-hero.jpg') 63% top / cover no-repeat;
     pointer-events: none;
 }
 
@@ -693,10 +700,13 @@ figure.illustration.float-right {
    will drift on viewport shapes very different from the photo's own
    ~1.56:1 ratio.
    Ink flips light-on-dark here (this photo's sky is dark, not the
-   previous photo's bright one) - same "Caslon Softened" treatment
-   (Libre Caslon Display, +letter-spacing, colour eased toward the
-   background rather than solid), just eased toward off-white instead
-   of toward navy. */
+   previous photo's bright one), using the site's card/entry cream
+   (#F3EDE5) rather than a bespoke eased-navy or eased-cream mix.
+   Hardcoded rather than `var(--entry)`/`var(--theme)` deliberately -
+   both of those flip to dark greys in dark mode (correct for normal
+   page content), but this text sits on a fixed photo that doesn't
+   itself change with the toggle, so a theme-linked colour would go
+   dark-on-dark and disappear for dark-mode visitors. */
 .hero-headline {
     position: absolute;
     /* 15% of the section's height works while that height is generous
@@ -706,8 +716,11 @@ figure.illustration.float-right {
        painted underneath the header and looks clipped. Never let it
        sit closer to the top than the header itself plus a little air. */
     top: max(12%, calc(var(--header-height) + 20px));
-    left: 24%;
-    right: 14%;
+    /* Same 62%-wide box as before, but symmetric now - left:24%/
+       right:14% put the box's own midpoint at 55%, not 50%, so the
+       centred text inside it was still 5% right of true centre. */
+    left: 19%;
+    right: 19%;
     z-index: 1;
     margin: 0;
     display: flex;
@@ -719,7 +732,7 @@ figure.illustration.float-right {
     font-size: clamp(1.8rem, 5.7vw, 2.8rem);
     letter-spacing: 0.015em;
     line-height: 1.3;
-    color: color-mix(in srgb, #FAF9F5 85%, #101B33 15%);
+    color: #F3EDE5;
     text-align: center;
 }
 

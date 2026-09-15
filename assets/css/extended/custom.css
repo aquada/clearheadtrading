@@ -703,7 +703,13 @@ figure.illustration.float-right {
    contrast/spacing treatment on top of the same font already in use. */
 .hero-headline {
     position: absolute;
-    top: 15%;
+    /* 15% of the section's height works while that height is generous
+       (portrait phones/tablets/desktop), but on a short, wide viewport
+       (a phone rotated to landscape) 15% shrinks to less than the
+       sticky header's own height, so the top of the text ends up
+       painted underneath the header and looks clipped. Never let it
+       sit closer to the top than the header itself plus a little air. */
+    top: max(12%, calc(var(--header-height) + 20px));
     left: 24%;
     right: 14%;
     z-index: 1;
@@ -727,7 +733,8 @@ figure.illustration.float-right {
         right: 8%;
         flex-direction: column;
         align-items: center;
-        gap: 0.15em;
+        gap: 0.05em;
+        line-height: 1.1;
         font-size: clamp(2.4rem, 7.5vw, 3.45rem);
     }
     .hero-dot {
@@ -781,6 +788,16 @@ figure.illustration.float-right {
     margin: 0 0 0.7em;
 }
 
+/* Phone in landscape: the side copy sits too close to the headline/
+   header at top:30% once the section is this short. Nudge it down a
+   bit - still within the 30-51% band above that's verified dark on
+   both sides, just further into it. */
+@media (orientation: landscape) and (max-height: 500px) {
+    .hero-subtext {
+        top: 42%;
+    }
+}
+
 .hero-subtext-left {
     left: 3%;
 }
@@ -788,6 +805,31 @@ figure.illustration.float-right {
 .hero-subtext-right {
     right: 3%;
     text-align: right;
+}
+
+/* A quiet hint that there's more below the fold - homepage only, since
+   that's the only page with a full-screen photo hiding the next
+   section entirely. */
+.hero-scroll-cue {
+    position: absolute;
+    left: 50%;
+    bottom: 6%;
+    transform: translateX(-50%);
+    z-index: 1;
+    color: #101B33;
+    opacity: 0;
+    animation: hero-fade-in 0.9s ease-out 2.6s both, hero-bounce 2s ease-in-out 3.6s infinite;
+}
+
+@keyframes hero-bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(6px); }
+}
+
+@media (max-width: 700px) {
+    .hero-scroll-cue {
+        bottom: 4%;
+    }
 }
 
 .cht-find-section {
@@ -830,19 +872,14 @@ figure.illustration.float-right {
    handled by the .cht-banner-fixed wrapper around it now, not here. */
 .header {
     /* Pinned: stays at the top of the viewport while the photo band
-       (and rest of the page) scrolls normally underneath it. */
+       (and rest of the page) scrolls normally underneath it. Solid
+       colour, not the photo showing through - one fixed look in each
+       theme rather than varying with whatever's behind it. */
     position: sticky;
     top: 0;
     z-index: 2;
-    background: color-mix(in srgb, var(--theme) 20%, transparent);
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
-}
-
-[data-theme="dark"] .header {
-    background: color-mix(in srgb, var(--theme) 32%, transparent);
-    border-bottom-color: rgba(255, 255, 255, 0.08);
+    background: var(--theme);
+    border-bottom: 1px solid var(--border);
 }
 
 /* Menu links were the accent orange like every other link on the
@@ -857,4 +894,68 @@ figure.illustration.float-right {
 .header-nav .menu a:hover,
 .logo a:hover {
     color: #C96442;
+}
+
+/* Hamburger menu for narrow screens. PaperMod's own nav is a plain
+   flex row that just horizontally scrolls when it doesn't fit - with
+   seven menu items that's cramped on a phone, so collapse it behind
+   a toggle button instead below 900px. */
+.nav-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-left: auto;
+    padding: 0;
+    background: none;
+    border: none;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.nav-toggle .nav-toggle-icon-close {
+    display: none;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-icon-open {
+    display: none;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-icon-close {
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+        flex-basis: 100%;
+        flex-direction: column;
+        row-gap: 0;
+        overflow-x: visible;
+        white-space: normal;
+        padding: 0.4rem 0 0.6rem;
+    }
+
+    .menu.open {
+        display: flex;
+    }
+
+    .menu li {
+        width: 100%;
+    }
+
+    .menu a {
+        display: block;
+        /* .header-nav sets line-height: var(--header-height) (60px) for
+           the normal single-row layout; stacked links inherit that and
+           end up with huge line boxes, so reset it before adding our
+           own padding. */
+        line-height: 1.4;
+        padding: 0.5rem 0.2rem;
+    }
 }

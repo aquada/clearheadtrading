@@ -684,23 +684,19 @@ figure.illustration.float-right {
 }
 
 /* Text painted directly onto the photo (no card) - positions are tuned
-   to this specific image's composition (sky gap between two peaks,
-   dark mountain on the left), verified against the actual pixels
-   rather than eyeballed. Percentages are relative to .hero-section, so
-   they hold as long as the crop's top edge stays anchored (see the
-   `center top` position above) - they will drift on viewport shapes
-   very different from the photo's own ~1.56:1 ratio. */
-/* One row on desktop (dots as separators), stacked centred lines only
-   once the screen is narrow enough that a row would force the font
-   down too far. Row box widened slightly from the original (24%/14%,
-   was 30%/19%) to buy room for a bigger font, verified against the
-   photo's own safe-sky measurement at this height (24-90% clear at
-   top:15%) rather than eyeballed.
-   Colour and letter-spacing follow the actual "Caslon Softened"
-   treatment (Libre Caslon Display, +letter-spacing, colour eased
-   toward the background rather than solid ink) traced back to a
-   design canvas from Dan's other business - not a font swap, a
-   contrast/spacing treatment on top of the same font already in use. */
+   to this specific image's composition (night sky above the balloon,
+   dark water below it), verified against the actual pixels rather
+   than eyeballed - the headline row and both subtext columns all
+   measured under luma 40/255 in this photo's dark-sky band. Percentages
+   are relative to .hero-section, so they hold as long as the crop's
+   top edge stays anchored (see the `center top` position above) - they
+   will drift on viewport shapes very different from the photo's own
+   ~1.56:1 ratio.
+   Ink flips light-on-dark here (this photo's sky is dark, not the
+   previous photo's bright one) - same "Caslon Softened" treatment
+   (Libre Caslon Display, +letter-spacing, colour eased toward the
+   background rather than solid), just eased toward off-white instead
+   of toward navy. */
 .hero-headline {
     position: absolute;
     /* 15% of the section's height works while that height is generous
@@ -723,7 +719,7 @@ figure.illustration.float-right {
     font-size: clamp(1.8rem, 5.7vw, 2.8rem);
     letter-spacing: 0.015em;
     line-height: 1.3;
-    color: color-mix(in srgb, #101B33 82%, #FAF9F5 18%);
+    color: color-mix(in srgb, #FAF9F5 85%, #101B33 15%);
     text-align: center;
 }
 
@@ -762,14 +758,12 @@ figure.illustration.float-right {
 @keyframes hero-from-right{ from { opacity: 0; transform: translateX(2em); } to { opacity: 1; transform: translateX(0); } }
 @keyframes hero-fade-in    { from { opacity: 0; } to { opacity: 1; } }
 
-/* Split across both mountains instead of one tall column on the left -
-   half the text per side means half the height needed, which is what
-   actually fixes the top/bottom spillover rather than another size or
-   position tweak. top:30% is deliberately the point both mountains are
-   reliably solid dark at once (checked pixel-by-pixel: the left side
-   has a thin mist band around 39% and the right side has sky bleeding
-   in above ~28%, so 30-51% is the range both sides share). Hard cap +
-   overflow stay as the backstop for whatever device breaks this next. */
+/* Split into two columns either side of the balloon rather than one
+   tall block - half the text per side means half the height needed.
+   top:30% sits in this photo's dark upper sky on both sides (measured
+   luma in the high 30s/low 40s out of 255, well clear of the moon and
+   the balloon itself). Hard cap + overflow stay as the backstop for
+   whatever device breaks this next. */
 .hero-subtext {
     position: absolute;
     top: 30%;
@@ -816,7 +810,7 @@ figure.illustration.float-right {
     bottom: 6%;
     transform: translateX(-50%);
     z-index: 1;
-    color: #101B33;
+    color: #F3EDE5;
     opacity: 0;
     animation: hero-fade-in 0.9s ease-out 2.6s both, hero-bounce 2s ease-in-out 3.6s infinite;
 }

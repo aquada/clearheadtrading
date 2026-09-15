@@ -2,10 +2,10 @@
 :root {
     --theme:          #FAF9F5;
     --entry:          #F3EDE5;
-    --primary:        #1C1917;
+    --primary:        #454B52;
     --secondary:      #6B5E52;
     --tertiary:       #DDD5CB;
-    --content:        #1C1917;
+    --content:        #454B52;
     --code-block-bg:  #2C2016;
     --code-bg:        #EDE5DB;
     --border:         #E2D9CF;
@@ -25,41 +25,6 @@ a:hover { color: #A84F32; }
 .post-tags a:hover {
     border-color: var(--tertiary);
     color: var(--secondary);
-}
-
-/* ── Homepage hero ─────────────────────────────────────────────── */
-.hero-section {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 1.5rem;
-}
-
-.hero-text {
-    flex: 1;
-}
-
-.hero-mascot {
-    width: 180px;
-    flex-shrink: 0;
-}
-
-.hero-text h1 {
-    font-size: 2.2em;
-    line-height: 1.2;
-    margin-top: 0;
-    margin-bottom: 0.6em;
-    color: var(--primary);
-}
-
-@media (max-width: 600px) {
-    .hero-section {
-        flex-direction: column;
-        align-items: center;
-    }
-    .hero-mascot {
-        width: 130px;
-    }
 }
 
 /* ── Fonts ─────────────────────────────────────────────────────── */
@@ -497,7 +462,6 @@ figure.illustration.float-right {
     line-height: 1.25;
     margin-top: 0;
     margin-bottom: 0.6em;
-    color: var(--primary);
 }
 
 .journal-hero-sub {
@@ -685,4 +649,320 @@ figure.illustration.float-right {
     }
     .journal-lightbox-prev { left: 0.5rem; }
     .journal-lightbox-next { right: 0.5rem; }
+}
+
+/* ── Sitewide photo banner ─────────────────────────────────────────
+   Every page opens with this photo band, sized to fill roughly the
+   first screen (not fixed - it scrolls away normally as you scroll
+   into the rest of the page). Markup comes from the project's own
+   layouts/baseof.html override, so it's not per-page content. */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    /* Break out of .main's centered content column so the photo runs
+       edge-to-edge like the header bar above it, not boxed into the
+       narrow text column. */
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    /* Pulls the hero up by the header's own height, so the photo
+       starts exactly at the header's top edge (full overlap) while
+       the header itself stays in normal flow (pinned via sticky). */
+    margin-top: calc(-1 * (var(--header-height) + var(--gap)));
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+}
+
+.cht-photo-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    /* The balloon sits at ~63% across the photo, not dead centre. On a
+       tall, narrow box `cover` scales to match height and crops the
+       sides - centred on 50% that crop cut the balloon in half on
+       narrow phones. Anchoring the crop on the balloon's own position
+       instead keeps it in frame. Wide viewports never crop
+       horizontally at all (they're width-constrained), so this has no
+       effect there - checked the numbers, not just eyeballed. */
+    background: url('/images/homepage-hero.jpg') 63% top / cover no-repeat;
+    pointer-events: none;
+}
+
+/* Text painted directly onto the photo (no card) - positions are tuned
+   to this specific image's composition (night sky above the balloon,
+   dark water below it), verified against the actual pixels rather
+   than eyeballed - the headline row and both subtext columns all
+   measured under luma 40/255 in this photo's dark-sky band. Percentages
+   are relative to .hero-section, so they hold as long as the crop's
+   top edge stays anchored (see the `center top` position above) - they
+   will drift on viewport shapes very different from the photo's own
+   ~1.56:1 ratio.
+   Ink flips light-on-dark here (this photo's sky is dark, not the
+   previous photo's bright one), using the site's card/entry cream
+   (#F3EDE5) rather than a bespoke eased-navy or eased-cream mix.
+   Hardcoded rather than `var(--entry)`/`var(--theme)` deliberately -
+   both of those flip to dark greys in dark mode (correct for normal
+   page content), but this text sits on a fixed photo that doesn't
+   itself change with the toggle, so a theme-linked colour would go
+   dark-on-dark and disappear for dark-mode visitors. */
+.hero-headline {
+    position: absolute;
+    /* 15% of the section's height works while that height is generous
+       (portrait phones/tablets/desktop), but on a short, wide viewport
+       (a phone rotated to landscape) 15% shrinks to less than the
+       sticky header's own height, so the top of the text ends up
+       painted underneath the header and looks clipped. Never let it
+       sit closer to the top than the header itself plus a little air. */
+    top: max(12%, calc(var(--header-height) + 20px));
+    /* Same 62%-wide box as before, but symmetric now - left:24%/
+       right:14% put the box's own midpoint at 55%, not 50%, so the
+       centred text inside it was still 5% right of true centre. */
+    left: 19%;
+    right: 19%;
+    z-index: 1;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    gap: 0.4em;
+    font-family: 'Libre Caslon Display', Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.8rem, 5.7vw, 2.8rem);
+    letter-spacing: 0.015em;
+    line-height: 1.3;
+    color: #F3EDE5;
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    .hero-headline {
+        left: 8%;
+        right: 8%;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.05em;
+        line-height: 1.1;
+        font-size: clamp(2.4rem, 7.5vw, 3.45rem);
+    }
+    .hero-dot {
+        display: none;
+    }
+    .hero-subtext {
+        display: none;
+    }
+}
+
+.hero-phrase,
+.hero-dot {
+    opacity: 0;
+}
+
+.run .hero-phrase-0 { animation: hero-from-left 0.8s ease-out 0.1s both; }
+.run .hero-dot-1 { animation: hero-fade-in 0.5s ease-out 0.7s both; }
+.run .hero-phrase-1 { animation: hero-from-top 0.8s ease-out 0.9s both; }
+.run .hero-dot-2 { animation: hero-fade-in 0.5s ease-out 1.5s both; }
+.run .hero-phrase-2 { animation: hero-from-right 0.8s ease-out 1.7s both; }
+.run .hero-subtext { animation: hero-fade-in 0.9s ease-out 2.3s both; }
+
+@keyframes hero-from-left { from { opacity: 0; transform: translateX(-2em); } to { opacity: 1; transform: translateX(0); } }
+@keyframes hero-from-top  { from { opacity: 0; transform: translateY(-1em); } to { opacity: 1; transform: translateY(0); } }
+@keyframes hero-from-right{ from { opacity: 0; transform: translateX(2em); } to { opacity: 1; transform: translateX(0); } }
+@keyframes hero-fade-in    { from { opacity: 0; } to { opacity: 1; } }
+
+/* Split into two columns either side of the balloon rather than one
+   tall block - half the text per side means half the height needed.
+   top:30% sits in this photo's dark upper sky on both sides (measured
+   luma in the high 30s/low 40s out of 255, well clear of the moon and
+   the balloon itself). Hard cap + overflow stay as the backstop for
+   whatever device breaks this next. */
+.hero-subtext {
+    position: absolute;
+    top: 30%;
+    width: 24%;
+    max-height: 20vh;
+    overflow: hidden;
+    z-index: 1;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(0.7rem, 1.6vmin, 1rem);
+    line-height: 1.5;
+    color: #F3EDE5;
+    opacity: 0;
+}
+
+.hero-subtext p {
+    margin: 0 0 0.7em;
+}
+
+/* Phone in landscape: the side copy sits too close to the headline/
+   header at top:30% once the section is this short. Nudge it down a
+   bit - still within the 30-51% band above that's verified dark on
+   both sides, just further into it. */
+@media (orientation: landscape) and (max-height: 500px) {
+    .hero-subtext {
+        top: 42%;
+    }
+}
+
+.hero-subtext-left {
+    left: 3%;
+}
+
+.hero-subtext-right {
+    right: 3%;
+    text-align: right;
+}
+
+/* A quiet hint that there's more below the fold - homepage only, since
+   that's the only page with a full-screen photo hiding the next
+   section entirely. */
+.hero-scroll-cue {
+    position: absolute;
+    left: 50%;
+    bottom: 6%;
+    transform: translateX(-50%);
+    z-index: 1;
+    color: #F3EDE5;
+    opacity: 0;
+    animation: hero-fade-in 0.9s ease-out 2.6s both, hero-bounce 2s ease-in-out 3.6s infinite;
+}
+
+@keyframes hero-bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(6px); }
+}
+
+@media (max-width: 700px) {
+    .hero-scroll-cue {
+        bottom: 4%;
+    }
+}
+
+.cht-find-section {
+    background: var(--theme);
+    border-top: 1px solid var(--border);
+    margin: 0 calc(-1 * var(--gap));
+    padding: 3rem var(--gap) 1rem;
+}
+
+/* ── "What you'll find here" cards ────────────────────────────────
+   One consistent outline per card (no fill) and the site's one
+   accent colour for every title/icon - same treatment for all six,
+   including Journal, instead of a different tint per item. */
+.cht-recent-posts-heading {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.find-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.find-card {
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.4rem;
+}
+
+.find-card .find-here-icon,
+.find-card strong a {
+    color: #C96442;
+}
+
+/* Frosted/translucent so the photo band shows through - position is
+   handled by the .cht-banner-fixed wrapper around it now, not here. */
+.header {
+    /* Pinned: stays at the top of the viewport while the photo band
+       (and rest of the page) scrolls normally underneath it. Solid
+       colour, not the photo showing through - one fixed look in each
+       theme rather than varying with whatever's behind it. */
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: var(--theme);
+    border-bottom: 1px solid var(--border);
+}
+
+/* Menu links were the accent orange like every other link on the
+   site, which read as too washed-out against a bright photo. Give
+   them the (now-charcoal) heading colour instead for real contrast;
+   logo text matches, so the whole bar reads as one consistent colour. */
+.header-nav .menu a,
+.logo a {
+    color: var(--primary);
+}
+
+.header-nav .menu a:hover,
+.logo a:hover {
+    color: #C96442;
+}
+
+/* Hamburger menu for narrow screens. PaperMod's own nav is a plain
+   flex row that just horizontally scrolls when it doesn't fit - with
+   seven menu items that's cramped on a phone, so collapse it behind
+   a toggle button instead below 900px. */
+.nav-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-left: auto;
+    padding: 0;
+    background: none;
+    border: none;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.nav-toggle .nav-toggle-icon-close {
+    display: none;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-icon-open {
+    display: none;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-icon-close {
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+        flex-basis: 100%;
+        flex-direction: column;
+        row-gap: 0;
+        overflow-x: visible;
+        white-space: normal;
+        padding: 0.4rem 0 0.6rem;
+    }
+
+    .menu.open {
+        display: flex;
+    }
+
+    .menu li {
+        width: 100%;
+    }
+
+    .menu a {
+        display: block;
+        /* .header-nav sets line-height: var(--header-height) (60px) for
+           the normal single-row layout; stacked links inherit that and
+           end up with huge line boxes, so reset it before adding our
+           own padding. */
+        line-height: 1.4;
+        padding: 0.5rem 0.2rem;
+    }
 }

@@ -27,7 +27,6 @@ Drag TradeLoggerSyncEA from the Navigator panel (Expert Advisors) onto any chart
 
 - **ApiKey** — paste the key from step 2
 - **IngestUrl** — leave as `https://journal.clearheadtrading.com/api/import/trades`
-- **PollSeconds** — how often it checks for newly closed trades, in seconds (30 by default, not minutes)
 - **OnlyAfter** — only syncs trades opened on or after this date. Leave it at 1970.01.01 to sync your whole history, or set a cutoff if you've already imported older trades another way. Set this once, before first use — changing it later won't reach trades older than ones already synced.
 
 Make sure "Allow live trading" (or "Allow automated trading") is enabled for the EA, and check for the smiley-face icon in the chart's top-right corner confirming it's running.

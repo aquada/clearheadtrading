@@ -203,7 +203,7 @@
       "website": "https://apextraderfunding.com",
       "affiliateUrl": "",
       "active": true,
-      "notes": "Availability: Apex does not accept South African residents, according to restricted-country lists. Pricing: Apex moved to a one-time evaluation fee in March 2026. The costs shown are the old monthly rates and are out of date, and the rules shown also reflect the pre-March 2026 model. Futures and indices only. Traders report payout denials and account freezes. A federal lawsuit, Lawton v. Apex Trader Funding (W.D. Texas, filed July 2026), alleges fraudulent practices; Apex denies the claims. Earlier matters include an $800k dispute between two traders, attorney-general complaints in Michigan and Texas, and a gag-order lawsuit against a YouTuber. Metals trading has been suspended since March 2026.",
+      "notes": "Shown: the standard Intraday Trail evaluation at one-time price, before coupon codes. An activation fee is charged only after you pass; the amount is not shown on the firm's page. A no-activation-fee version is also sold, at a higher upfront price (for example $690 on 25K). Drawdown is $1,000 on 25K, $2,000 on 50K, $3,000 on 100K and $4,000 on 150K, so the 4% shown applies to the smaller accounts. The evaluation lasts 30 days with no resets. Futures and indices only. The firm says its services are for U.S. users only; restricted-country lists include South Africa. Traders report payout denials and account freezes. A federal lawsuit (Lawton v. Apex, filed July 2026) alleges fraudulent practices; Apex denies this.",
       "ea": true,
       "indices": true,
       "forex": false,
@@ -229,11 +229,11 @@
         "note": "FPA's review thread contains detailed trader complaints about payout restrictions and rule enforcement — consistent with our own lawsuit/complaint findings above despite the decent aggregate Trustpilot number."
       },
       "profitTarget": 6,
-      "maxDrawdown": 6,
+      "maxDrawdown": 4,
       "dailyLoss": 3,
       "payout": 90,
       "payoutFreq": "Weekly",
-      "minDays": 7,
+      "minDays": 1,
       "resetFee": true,
       "country": "USA",
       "currency": "USD",
@@ -244,19 +244,15 @@
         },
         {
           "size": 50000,
-          "cost": 167
+          "cost": 249
         },
         {
           "size": 100000,
-          "cost": 207
+          "cost": 790
         },
         {
           "size": 150000,
-          "cost": 237
-        },
-        {
-          "size": 300000,
-          "cost": 257
+          "cost": 1190
         }
       ]
     },

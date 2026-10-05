@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-05",
+  "lastUpdated": "2026-08-01",
   "exchangeRates": {
     "asOf": "2026-07-09",
     "USD": 1,
@@ -10,7 +10,7 @@
     {
       "id": 1,
       "name": "FTMO",
-      "lastVerified": "2026-10-05",
+      "lastVerified": "2026-08-01",
       "website": "https://ftmo.com",
       "affiliateUrl": "/go/ftmo",
       "active": true,
@@ -73,7 +73,7 @@
     {
       "id": 2,
       "name": "The5%ers",
-      "lastVerified": "2026-10-05",
+      "lastVerified": "2026-08-01",
       "website": "https://the5ers.com",
       "affiliateUrl": "",
       "active": true,
@@ -134,7 +134,7 @@
     {
       "id": 3,
       "name": "FundedNext",
-      "lastVerified": "2026-10-05",
+      "lastVerified": "2026-08-01",
       "website": "https://fundednext.com",
       "affiliateUrl": "",
       "active": true,
@@ -199,7 +199,7 @@
     {
       "id": 4,
       "name": "Apex Trader Funding",
-      "lastVerified": "2026-10-05",
+      "lastVerified": "2026-08-01",
       "website": "https://apextraderfunding.com",
       "affiliateUrl": "",
       "active": true,
@@ -263,7 +263,7 @@
     {
       "id": 5,
       "name": "E8 Markets (E8 Funding)",
-      "lastVerified": "2026-10-05",
+      "lastVerified": "2026-08-01",
       "website": "https://e8markets.com",
       "affiliateUrl": "",
       "active": true,
@@ -322,7 +322,7 @@
     {
       "id": 6,
       "name": "Topstep",
-      "lastVerified": "2026-10-05",
+      "lastVerified": "2026-08-01",
       "website": "https://topstep.com",
       "affiliateUrl": "",
       "active": true,
@@ -370,7 +370,7 @@
     {
       "id": 7,
       "name": "True Forex Funds",
-      "lastVerified": "2026-10-05",
+      "lastVerified": "2026-08-01",
       "website": "https://trueforexfunds.com",
       "affiliateUrl": "",
       "active": false,
@@ -418,7 +418,7 @@
     {
       "id": 8,
       "name": "Blue Guardian",
-      "lastVerified": "2026-10-05",
+      "lastVerified": "2026-08-01",
       "website": "https://blueguardian.com",
       "affiliateUrl": "",
       "active": true,
@@ -482,7 +482,7 @@
     {
       "id": 9,
       "name": "Fidelcrest",
-      "lastVerified": "2026-10-05",
+      "lastVerified": "2026-08-01",
       "website": "https://fidelcrest.com",
       "affiliateUrl": "",
       "active": false,
@@ -530,7 +530,7 @@
     {
       "id": 10,
       "name": "City Traders Imperium",
-      "lastVerified": "2026-10-05",
+      "lastVerified": "2026-08-01",
       "website": "https://citytradersimperium.com",
       "affiliateUrl": "",
       "active": true,
@@ -593,7 +593,7 @@
     {
       "id": 11,
       "name": "Lux Trading Firm",
-      "lastVerified": "2026-10-05",
+      "lastVerified": "2026-08-01",
       "website": "https://luxtradingfirm.com",
       "affiliateUrl": "",
       "active": true,
@@ -649,7 +649,7 @@
     {
       "id": 12,
       "name": "MyForexFunds",
-      "lastVerified": "2026-10-05",
+      "lastVerified": "2026-08-01",
       "website": "https://myforexfunds.com",
       "affiliateUrl": "",
       "active": false,

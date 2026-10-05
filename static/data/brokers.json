@@ -104,7 +104,7 @@
       "affiliateUrl": "",
       "active": true,
       "personal": false,
-      "notes": "Rebranding from icmarkets.com to ic.com (domain migration completed 2026-07-11 — use the new domain). CySEC fined the EU entity twice: €200,000 for routing EU retail clients to an offshore entity offering up to 1000:1 leverage (circumventing the EU's 30:1 retail cap), and €50,000 for best-execution/cost-disclosure failures — both reportedly under appeal. FCA temporary UK permission was cancelled Dec 2023, so IC Markets is not currently authorised to do regulated business in the UK despite historic name recognition there. ASIC and CySEC are the two solidly confirmed regulators; FSCA South Africa and SCB Bahamas status is disputed by third-party sources. A 2025 pattern of Trustpilot and Forex Peace Army complaints describes frozen accounts and withdrawal delays — funds shown as 'approved' in the portal but not released, some cases dragging on for weeks. Not proof of misconduct on its own, but corroborated independently across multiple review sources rather than a handful of isolated posts, and consistent with the offshore-entity routing most non-Australian clients fall under.",
+      "notes": "Rebranded from icmarkets.com to ic.com (migration completed 11 July 2026). CySEC fined the EU entity €200,000 for routing EU retail clients to an offshore entity offering up to 1000:1 leverage, and €50,000 for best-execution and cost-disclosure failures. Both are reported as under appeal. The FCA UK permission was cancelled in December 2023, so IC Markets is not authorised for regulated UK business. ASIC and CySEC are the confirmed regulators; FSCA South Africa and SCB Bahamas status is disputed. A 2025 pattern of complaints describes frozen accounts and withdrawal delays, with funds shown as approved but not released for weeks.",
       "regulation": [
         "ASIC",
         "CySEC"
@@ -538,7 +538,7 @@
       "affiliateUrl": "",
       "active": true,
       "personal": false,
-      "notes": "The FCA issued a warning (2026-04-02) that vantagemarkets.com 'is not authorised by us' and 'is not associated with the FCA authorised firm Vantage Global Prime LLP' — unresolved whether this is a clone-domain issue or a cross-border-solicitation notice, so FCA is deliberately excluded from the regulation list below pending clarity; only the ASIC/FSCA/CIMA/VFSC licenses are shown. ForexPeaceArmy reported (Dec 2024) a Vantage employee posting fake independent client endorsements — a real credibility issue, not an ordinary complaint. Rebranded from 'Vantage FX' to 'Vantage' in Nov 2021, a disclosed marketing rebrand tied to multi-asset expansion.",
+      "notes": "The FCA warned on 2 April 2026 that vantagemarkets.com is not authorised by it and is not associated with the FCA-authorised Vantage Global Prime LLP. The FCA's position on this domain is unclear, so the FCA is not listed below; only the ASIC, FSCA, CIMA and VFSC licences are shown. ForexPeaceArmy reported in December 2024 that a Vantage employee posted fake independent client endorsements. Rebranded from Vantage FX to Vantage in November 2021 as a disclosed marketing change tied to multi-asset expansion.",
       "regulation": [
         "ASIC",
         "FSCA",
@@ -722,7 +722,7 @@
       "affiliateUrl": "",
       "active": true,
       "personal": false,
-      "notes": "Regulated by FCA, CySEC, FSCA South Africa, FSA Seychelles, and Labuan FSA (Malaysia). No confirmed regulatory fines or sanctions in the 2024-2026 window. An older (~2020) Malaysia Securities Commission alert listing could not be found on the regulator's current live list — treat as resolved/historical. Scalping and hedging are explicitly permitted, with no time limit on how long positions can be held. Segregated funds and investor compensation confirmed (FSCS up to £85,000 for UK clients, ICF up to €20,000 for EU clients).",
+      "notes": "Regulated by the FCA, CySEC, FSCA South Africa, FSA Seychelles and Labuan FSA (Malaysia). No confirmed regulatory fines or sanctions in 2024 to 2026. An older (around 2020) Malaysian Securities Commission alert is not on the regulator's current list; it is historical. Scalping and hedging are permitted, with no time limit on holding positions. Segregated funds and investor compensation apply: FSCS up to £85,000 for UK clients, ICF up to €20,000 for EU clients.",
       "regulation": [
         "FCA",
         "CySEC",
@@ -807,7 +807,7 @@
       "affiliateUrl": "",
       "active": true,
       "personal": false,
-      "notes": "Regulated by CySEC (178/12), FSCA South Africa (FSP 51024), and FSA Seychelles (SD025) among others; its FCA licence (730729) is a B2B/institutional authorisation, not retail, and most retail clients — including SA and non-EU traders — are onboarded under the Seychelles or another offshore entity rather than CySEC/FSCA. Widely and repeatedly praised for fast, near-instant withdrawals, a genuine strength rather than just marketing copy. Index spread figures conflict sharply across sources: BrokerChooser measured US30 around 0.10 points during peak session overlap, while an older Finance Magnates hands-on test recorded 6-7 points on DAX/Dow — almost certainly off-peak widening, so treat any single quoted spread with caution. Exness's own 'Terminal' embeds TradingView's charting library for visuals, but that isn't genuine TradingView broker-side execution the way Pepperstone, IC Markets, and Fusion Markets offer it, so TradingView is marked unsupported here. Leverage is automatically capped (down to roughly 1:200) during high-impact news and over weekends rather than trading being restricted outright.",
+      "notes": "Regulated by CySEC (178/12), FSCA South Africa (FSP 51024) and FSA Seychelles (SD025), among others. Its FCA licence (730729) is for institutional business, not retail. Most retail clients, including South African and non-EU traders, are onboarded under the Seychelles or another offshore entity. Widely praised for fast, near-instant withdrawals. Index spreads vary sharply across sources: about 0.10 points at peak overlap, and 6 to 7 points on DAX and Dow in an older off-peak test. Check live spreads before trading. Exness's terminal embeds TradingView charts, but it does not offer TradingView broker-side execution, so TradingView is marked unsupported. Leverage is automatically capped (to about 1:200) during high-impact news and over weekends rather than trading being stopped.",
       "regulation": [
         "FCA",
         "CySEC",

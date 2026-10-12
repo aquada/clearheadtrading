@@ -1,0 +1,61 @@
+name: IndexNow Submit
+
+# Pings IndexNow (Bing, Yandex, and other participating engines) with every
+# page URL whenever content or static assets change on main, so engines
+# don't have to wait for their own crawl schedule to notice new/updated
+# pages. Builds the site here (not against the live site) so the URL list
+# reflects what was just pushed, not whatever Netlify has deployed so far.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/**'
+      - 'static/**'
+  workflow_dispatch: {}
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3.0.0
+        with:
+          hugo-version: '0.162.1'
+          extended: true
+
+      - name: Build site
+        run: hugo --minify
+
+      - name: Submit URLs to IndexNow
+        run: |
+          python3 - << 'PY'
+          import json
+          import re
+          import urllib.request
+
+          xml = open('public/sitemap.xml', encoding='utf-8').read()
+          urls = re.findall(r'<loc>(.*?)</loc>', xml)
+          print(f"Submitting {len(urls)} URLs to IndexNow")
+
+          key = "65cf5ce0e0e216307689fed27aade809"
+          payload = json.dumps({
+              "host": "clearheadtrading.com",
+              "key": key,
+              "keyLocation": f"https://clearheadtrading.com/{key}.txt",
+              "urlList": urls,
+          }).encode("utf-8")
+
+          req = urllib.request.Request(
+              "https://api.indexnow.org/indexnow",
+              data=payload,
+              headers={"Content-Type": "application/json; charset=utf-8"},
+              method="POST",
+          )
+          with urllib.request.urlopen(req) as resp:
+              print(resp.status, resp.read().decode())
+          PY

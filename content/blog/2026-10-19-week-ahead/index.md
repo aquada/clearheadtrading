@@ -2,20 +2,20 @@
 title: "Week ahead: NASD slides as AI-bubble worries deepen"
 date: 2026-10-19T07:00:00+02:00
 draft: false
-description: "NASD had its worst week since June after a hotter-than-expected September inflation reading revived chip-stock worries about AI spending and Chinese competition. DAX and Dow both held up far better, with DAX actually gaining on strength in defence and auto stocks. This week brings earnings from Netflix, Tesla and Johnson & Johnson, plus Friday's flash PMI readings."
+description: "NASD had its roughest week in months after a hotter-than-expected September inflation reading revived chip-stock worries about AI spending and Chinese competition. DAX and Dow both held up far better, with DAX actually gaining on strength in defence and auto stocks. This week brings earnings from Netflix, Tesla and Johnson & Johnson, plus Friday's flash PMI readings."
 cover:
   image: "ai-bubble-week.png"
-  alt: "Bar chart showing weekly percentage change for DAX (+2.1%), Dow (+0.7%), and NASD (-4.5%) for the week ending Friday, October 16"
-  caption: "NASD's worst week since June stood out against solid gains for DAX and a smaller one for Dow"
+  alt: "Bar chart showing weekly percentage change for DAX (+2.1%), Dow (+0.7%), and NASD (-5.5%) for the week ending Friday, October 16"
+  caption: "NASD's roughest week in months stood out against solid gains for DAX and a smaller one for Dow"
 categories: ["Market Review"]
 tags: ["DAX", "Dow", "Nasdaq", "week ahead", "inflation", "earnings season"]
 ---
 
-Wednesday's inflation report was the week's turning point. September's consumer prices rose 3.7% year on year, hotter than the 3.6% forecast, and that was enough to revive worries about another Fed rate rise just as investors were already nervous about how much money has been poured into AI infrastructure and how exposed US chipmakers are to Chinese competition. Chip stocks bore the brunt of it, and NASD never really recovered even as Thursday brought a partial rebound. DAX and Dow told a different story: both held up far better, and DAX actually finished the week higher, carried by defence and auto stocks rather than anything to do with inflation at all.
+Wednesday's inflation report was the week's turning point. September's consumer prices rose 3.7% year on year, hotter than the 3.6% forecast, and that was enough to revive worries about another Fed rate rise just as investors were already nervous about how much money has been poured into AI infrastructure and how exposed US chipmakers are to Chinese competition. Chip stocks bore the brunt of it, and NASD (the Nasdaq-100) never really recovered even as Thursday brought a partial rebound. DAX and Dow told a different story: both held up far better, and DAX actually finished the week higher, carried by defence and auto stocks rather than anything to do with inflation at all.
 
 ## Last week
 
-NASD fell 4.5% to close at 26,140.03, its worst week since June, as Micron dropped 5.6% and Intel lost 5.8% on Friday alone. Dow added 0.7% to 52,002.41, with energy stocks helping cushion the broader tech-led weakness. DAX gained 2.1% to 25,622.42, helped by Rheinmetall's 6.1% jump as European leaders met in Brussels to reaffirm support for Ukraine, plus solid gains for BMW, Mercedes-Benz and Volkswagen on hopes of more flexible EU emissions rules.
+NASD fell 5.5% to close at 29,187.55, one of its roughest weeks in months, as Micron dropped 5.6% and Intel lost 5.8% on Friday alone on the broader chip-stock selloff. Dow added 0.7% to 52,002.41, with energy stocks helping cushion the broader tech-led weakness. DAX gained 2.1% to 25,622.42, helped by Rheinmetall's 6.1% jump as European leaders met in Brussels to reaffirm support for Ukraine, plus solid gains for BMW, Mercedes-Benz and Volkswagen on hopes of more flexible EU emissions rules.
 
 ## The week ahead
 
@@ -26,13 +26,13 @@ DAX has [support](/learn/reading-charts/support-and-resistance/) around 25,520 a
 
 ### Dow
 
-<!-- Support/resistance from the daily chart's own swing structure: the Oct 12/14 high cluster (51,850-51,930, investing.com) is now support after last week's breakout; the Sep 22/Oct 13 high cluster (~52,320) is the nearest resistance above it. -->
-Dow has support around 51,850 and resistance around 52,320, with its record high of 54,349 still standing above both. Dow has now held up through two straight weeks of tech wobbles, largely because it carries so much less exposure to the AI and chip names driving the selling. Netflix and Johnson & Johnson both report Tuesday, and while neither moves the index much on its own, a broadly strong start to earnings season would help keep that resilience intact.
+<!-- Support/resistance from the daily chart's own swing structure: the Oct 12/14 high cluster (51,850-51,930, investing.com) is now support after last week's breakout; the Sep 22/Oct 13 high cluster (~52,320) is the nearest resistance above it. Dow's all-time high is 54,796.45 (corrected from 54,349 cited previously). -->
+Dow has support around 51,850 and resistance around 52,320, with its record high of 54,796 still standing above both. Dow has now held up through two straight weeks of tech wobbles, largely because it carries so much less exposure to the AI and chip names driving the selling. Netflix and Johnson & Johnson both report Tuesday, and while neither moves the index much on its own, a broadly strong start to earnings season would help keep that resilience intact.
 
 ### NASD
 
-<!-- Support/resistance from the daily chart's own swing structure: NASD broke clean through its late-September base (26,706-26,874, investing.com) with no shelf underneath yet, so support is this week's own low (26,023) and that broken base is now the nearest resistance above it (~26,874). Correction: NASD's actual record close is 27,599.89, set 6 October 2026 (investing.com), not the 27,244.28 cited in earlier posts. -->
-NASD has support around 26,023, this week's own low, with the late-September base it broke through, around 26,874, now standing overhead as the nearest resistance. That's also a correction worth flagging: NASD's real record close is 27,599.89, set on 6 October, not the 27,244.28 we've cited in recent weeks, a level the index had already moved well past before last week's reversal. Tesla reports Tuesday, and given how much of this week's selling was about AI spending and chip exposure specifically, its results and especially its tone on AI-related capital spending are likely to matter more than usual. A close below 26,023 would point to the selling having further to run; reclaiming 26,874 would be the clearest sign the AI-bubble worries are starting to fade rather than build.
+<!-- NASD now tracks the Nasdaq-100 (US100), not the Nasdaq Composite, to match what's actually traded. Support/resistance from the daily chart's own swing structure (investing.com Nasdaq 100 data): the index broke clean through its late-September base (29,933-30,081) with no shelf underneath yet, so support is this week's own low (29,073) and that broken base is now the nearest resistance above it (~29,930). All-time high is 31,404.65. -->
+NASD (the Nasdaq-100) has support around 29,073, this week's own low, with the late-September base it broke through, around 29,930, now standing overhead as the nearest resistance, and its record high of 31,405 well above that. Tesla reports Tuesday, and given how much of this week's selling was about AI spending and chip exposure specifically, its results and especially its tone on AI-related capital spending are likely to matter more than usual. A close below 29,073 would point to the selling having further to run; reclaiming 29,930 would be the clearest sign the AI-bubble worries are starting to fade rather than build.
 
 ## Elsewhere this week
 

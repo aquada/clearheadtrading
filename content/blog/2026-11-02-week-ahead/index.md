@@ -40,7 +40,7 @@ Oil eased further, with Brent near $108 a barrel and WTI around $99, as the risk
 
 ## The calendar
 
-This week's calendar builds toward Friday. **Monday** brings October's ISM manufacturing PMI, the first broad read on US factory activity since the Fed's decision. **Tuesday** sees September's JOLTS job openings data. **Wednesday** brings October's ISM services PMI, a sector that's held up better than manufacturing through most of the year. **Thursday** is comparatively quiet. **Friday** is the week's main event: October's US jobs report, due at 08:30 ET, which will shape how markets read the odds of a December rate move after a Fed decision that left the question open.
+This week's calendar builds toward Friday, with a political event in the middle of it too. **Monday** brings October's ISM manufacturing PMI, the first broad read on US factory activity since the Fed's decision. **Tuesday** is the 2026 US midterm elections, which won't change anything in Washington immediately since the new Congress doesn't sit until January, but Dow and NASD could still see some added volatility around it; the day's economic data, September's JOLTS job openings, is likely to take a back seat to the results. **Wednesday** brings October's ISM services PMI, a sector that's held up better than manufacturing through most of the year. **Thursday** is comparatively quiet. **Friday** is the week's main event: October's US jobs report, due at 08:30 ET, which will shape how markets read the odds of a December rate move after a Fed decision that left the question open.
 
 ---
 

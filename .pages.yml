@@ -8,6 +8,7 @@ content:
     type: collection
     path: content/blog
     subfolders: true
+    exclude: ["_index.md"]
     format: yaml-frontmatter
     filename:
       template: "{year}-{month}-{day}-{primary}/index.md"

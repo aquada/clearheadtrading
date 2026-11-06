@@ -14,9 +14,16 @@ content:
       template: "{year}-{month}-{day}-{primary}/index.md"
       field: create
     view:
+      layout: tree
+      node:
+        filename: index.md
+        hideDirs: others
       primary: title
       fields: [title, date, draft, categories]
-      sort: [date]
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
     fields:
       - name: title
         type: string

@@ -1,0 +1,123 @@
+media:
+  input: static/uploads
+  output: /uploads
+
+content:
+  - name: blog
+    label: "Blog Posts"
+    type: collection
+    path: content/blog
+    subfolders: true
+    format: yaml-frontmatter
+    filename:
+      template: "{year}-{month}-{day}-{primary}/index.md"
+      field: create
+    view:
+      primary: title
+      fields: [title, date, draft, categories]
+      sort: [date]
+    fields:
+      - name: title
+        type: string
+      - name: date
+        type: date
+        options:
+          format: "yyyy-MM-dd'T'HH:mm:ssxxx"
+          time: true
+      - name: draft
+        type: boolean
+        default: false
+      - name: description
+        type: text
+      - name: cover
+        type: object
+        fields:
+          - name: image
+            type: image
+            options:
+              path: static/uploads/blog
+          - name: alt
+            type: string
+          - name: caption
+            type: string
+      - name: categories
+        type: select
+        options:
+          multiple: true
+          values: ["Interviews", "Trade Breakdowns", "Psychology", "Guides", "Market Review"]
+      - name: tags
+        type: string
+        list: true
+      - name: body
+        type: rich-text
+
+  - name: prop_firms
+    label: "Prop Firm Reviews"
+    type: collection
+    path: content/prop-firms
+    exclude: ["_index.md", "compare.md"]
+    format: yaml-frontmatter
+    view:
+      primary: title
+      fields: [title]
+    fields:
+      - name: title
+        type: string
+      - name: description
+        type: text
+      - name: body
+        type: rich-text
+
+  - name: brokers
+    label: "Broker Reviews"
+    type: collection
+    path: content/brokers
+    exclude: ["_index.md", "compare.md"]
+    format: yaml-frontmatter
+    view:
+      primary: title
+      fields: [title]
+    fields:
+      - name: title
+        type: string
+      - name: description
+        type: text
+      - name: body
+        type: rich-text
+
+  - name: learn
+    label: "Learn Articles"
+    type: collection
+    path: content/learn
+    subfolders: true
+    exclude: ["_index.md"]
+    format: yaml-frontmatter
+    view:
+      primary: title
+      fields: [title, section, status, order]
+      sort: [section, order]
+    fields:
+      - name: title
+        type: string
+      - name: description
+        type: text
+      - name: section
+        type: string
+      - name: section_slug
+        type: string
+      - name: order
+        type: number
+      - name: weight
+        type: number
+      - name: status
+        type: select
+        options:
+          values: ["draft", "published"]
+      - name: tags
+        type: string
+        list: true
+      - name: related
+        type: string
+        list: true
+      - name: body
+        type: rich-text

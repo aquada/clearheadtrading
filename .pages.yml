@@ -11,7 +11,7 @@ content:
     exclude: ["_index.md"]
     format: yaml-frontmatter
     filename:
-      template: "{year}-{month}-{day}-{primary}/index.md"
+      template: "{year}-{month}-{day}-{primary}.md"
       field: create
     view:
       layout: tree

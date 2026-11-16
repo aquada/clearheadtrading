@@ -1,6 +1,6 @@
 ---
 title: "Week ahead: DAX sets a fresh record as the rebound builds, but Nvidia's earnings test it"
-date: 2026-11-16T07:00:00+02:00
+date: 2026-11-16T06:00:00+02:00
 draft: false
 description: "All three main indices rebounded hard from the prior week's AI-driven selloff, with DAX pushing to a fresh all-time high on Thursday. A hot October inflation reading and caution ahead of Nvidia's earnings clipped some of the gains into Friday's close. This week's main event is Tuesday's Nvidia earnings, with US retail sales the same day and FOMC minutes on Wednesday."
 cover:

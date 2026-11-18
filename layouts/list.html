@@ -43,19 +43,35 @@
 {{- if .IsHome }}
 {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true"  }}
-{{- end }}
+<section class="home-latest">
+  <div class="section-head">
+    <div>
+      <p class="section-kicker">From the blog</p>
+      <h2 class="section-title">Latest writing</h2>
+    </div>
+    <a class="section-more" href="{{ "blog/" | absURL }}">All posts →</a>
+  </div>
+  {{- with first 1 $pages }}
+  {{- partial "post_card.html" (dict "page" (index . 0) "featured" true) }}
+  {{- end }}
+  <div class="post-grid">
+    {{- range first 6 (after 1 $pages) }}
+    {{- partial "post_card.html" (dict "page" .) }}
+    {{- end }}
+  </div>
+</section>
+{{- else }}
 
 {{- $paginator := .Paginate $pages }}
 
-{{- if and .IsHome site.Params.homeInfoParams (eq $paginator.PageNumber 1) }}
-{{- partial "home_info.html" . }}
-{{- end }}
-
-{{- if and .IsHome (eq $paginator.PageNumber 1) }}
-<h2 class="cht-recent-posts-heading">Recent posts</h2>
-{{- end }}
-
 {{- $term := .Data.Term }}
+{{- if $term }}
+<div class="post-grid">
+{{- range $paginator.Pages }}
+{{- partial "post_card.html" (dict "page" .) }}
+{{- end }}
+</div>
+{{- else }}
 {{- range $index, $page := $paginator.Pages }}
 
 {{- $class := "post-entry" }}
@@ -96,6 +112,7 @@
   <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
 </article>
 {{- end }}
+{{- end }}{{/* end term vs plain list */}}
 
 {{- if gt $paginator.TotalPages 1 }}
 <footer class="page-footer">
@@ -119,6 +136,7 @@
   </nav>
 </footer>
 {{- end }}
+{{- end }}{{/* end home vs other lists */}}
 
 {{- end }}{{/* end profileMode */}}
 

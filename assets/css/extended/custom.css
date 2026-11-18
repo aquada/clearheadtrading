@@ -1,56 +1,484 @@
-/* ── Claude-inspired light mode palette ───────────────────────── */
+/* ── Palette ──────────────────────────────────────────────────── */
 :root {
     --theme:          #FAF9F5;
-    --entry:          #F3EDE5;
+    --entry:          #F4EFE8;
+    --surface:        #FFFDF9;
     --primary:        #5B6167;
+    --heading:        #2F3338;
     --secondary:      #6B5E52;
     --tertiary:       #DDD5CB;
     --content:        #5B6167;
     --code-block-bg:  #2C2016;
     --code-bg:        #EDE5DB;
-    --border:         #E2D9CF;
+    --border:         #E6DED4;
+    --accent:         #C96442;
+    --accent-strong:  #A84F32;
+    --accent-soft:    #F6E6DD;
+    --main-width:     720px;
+    --wide-width:     1120px;
+    --header-height:  68px;
+    --radius:         10px;
+    --shadow-card:    0 1px 2px rgba(60, 40, 20, 0.04), 0 8px 24px -12px rgba(60, 40, 20, 0.12);
+    --font-serif:     'Newsreader', Georgia, 'Times New Roman', serif;
+    --font-sans:      'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --font-mono:      'JetBrains Mono', 'Courier New', monospace;
+}
+
+:root[data-theme="dark"] {
+    --theme:          #1A1917;
+    --entry:          #23211E;
+    --surface:        #26241F;
+    --primary:        #CFC8BE;
+    --heading:        #F1ECE4;
+    --secondary:      #A39A8F;
+    --tertiary:       #3A3632;
+    --content:        #CFC8BE;
+    --code-block-bg:  #12110F;
+    --code-bg:        #2E2B27;
+    --border:         #34302B;
+    --accent:         #E0805F;
+    --accent-strong:  #EC9A7C;
+    --accent-soft:    #3A2A22;
+    --shadow-card:    0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px -12px rgba(0, 0, 0, 0.5);
 }
 
 /* PaperMod's own theme-vars.css tints .list (section/home/taxonomy) pages
    with --code-bg in light mode — override so every page kind matches body */
-.list {
+.list,
+[data-theme="dark"] .list {
     background: var(--theme);
 }
 
 /* ── Accent / links ────────────────────────────────────────────── */
-a { color: #C96442; }
-a:hover { color: #A84F32; }
+a { color: var(--accent); }
+a:hover { color: var(--accent-strong); }
+
+.post-content a,
+.site-contact a,
+.site-disclaimer a {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+    box-shadow: none;
+    transition: text-decoration-color 0.15s ease;
+}
+
+.post-content a:hover {
+    text-decoration-color: currentColor;
+}
+
+.post-content a.journal-cta,
+.post-content a.blog-cat-btn,
+.post-content a.contact-submit {
+    text-decoration: none;
+}
 
 .post-tags a,
 .post-tags a:hover {
-    border-color: var(--tertiary);
+    border-color: var(--border);
+    background: transparent;
     color: var(--secondary);
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
 }
 
-/* ── Fonts ─────────────────────────────────────────────────────── */
-body,
+.post-tags a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* ── Typography ────────────────────────────────────────────────── */
+body {
+    font-family: var(--font-serif);
+    font-optical-sizing: auto;
+    color: var(--content);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
 .post-content,
 .entry-content,
 .home-info-content {
-    font-family: 'Alfios', Georgia, 'Times New Roman', serif;
+    font-family: var(--font-serif);
 }
 
 h1, h2, h3, h4, h5, h6,
 .post-title,
 .entry-header h2 {
-    font-family: 'Alfios', Georgia, 'Times New Roman', serif;
+    font-family: var(--font-serif);
+    color: var(--heading);
+    font-weight: 500;
+    letter-spacing: -0.01em;
 }
 
-/* mono for code, pre, and the nav/meta labels */
-code, pre, kbd,
-.post-meta,
-.breadcrumbs {
-    font-family: 'JetBrains Mono', 'Courier New', monospace;
+code, pre, kbd {
+    font-family: var(--font-mono);
     font-size: 0.85em;
 }
 
 pre code {
     font-size: 1em; /* reset the double-small inside pre */
+}
+
+.post-meta,
+.breadcrumbs,
+.entry-footer {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    letter-spacing: 0.01em;
+    color: var(--secondary);
+}
+
+.breadcrumbs a {
+    color: var(--secondary);
+}
+
+.breadcrumbs a:hover {
+    color: var(--accent);
+}
+
+/* Small uppercase label above a heading */
+.section-kicker,
+.post-card-kicker {
+    display: block;
+    margin: 0 0 0.5rem;
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.section-title {
+    margin: 0;
+    font-size: clamp(1.7rem, 3vw, 2.2rem);
+    line-height: 1.15;
+}
+
+.section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+}
+
+.section-more {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+/* ── Layout widths ─────────────────────────────────────────────── */
+.is-wide .main {
+    max-width: calc(var(--wide-width) + var(--gap) * 2);
+}
+
+.is-wide .page-header {
+    max-width: var(--main-width);
+}
+
+/* ── Page headers ──────────────────────────────────────────────── */
+.page-header {
+    margin-bottom: 2rem;
+}
+
+.page-header h1,
+.post-title {
+    font-size: clamp(2rem, 4.2vw, 2.9rem);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.6rem;
+}
+
+.post-description,
+.page-header .post-description {
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--secondary);
+    margin-top: 0.4rem;
+}
+
+.page-header h1 svg {
+    color: var(--secondary);
+    vertical-align: middle;
+    height: 20px;
+}
+
+/* ── Single post ───────────────────────────────────────────────── */
+.post-header {
+    margin: 1.5rem 0 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.post-content {
+    font-size: 1.15rem;
+    line-height: 1.72;
+    color: var(--content);
+}
+
+.post-content p,
+.post-content ul,
+.post-content ol {
+    margin-bottom: 1.15em;
+}
+
+.post-content h2 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+    margin: 2.4em 0 0.7em;
+}
+
+.post-content h3 {
+    font-size: 1.35rem;
+    line-height: 1.3;
+    margin: 1.8em 0 0.5em;
+}
+
+.post-content h4 {
+    font-size: 1.1rem;
+    margin: 1.5em 0 0.4em;
+}
+
+.post-content strong {
+    color: var(--heading);
+    font-weight: 600;
+}
+
+.post-content blockquote {
+    margin: 1.8em 0;
+    padding: 0.2em 0 0.2em 1.2em;
+    border-inline-start: 3px solid var(--accent);
+    font-style: italic;
+    color: var(--secondary);
+}
+
+.post-content hr {
+    margin: 2.5em auto;
+    width: 4rem;
+    background: var(--border);
+}
+
+.post-content img {
+    border-radius: 8px;
+}
+
+.post-content table {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+}
+
+.post-content table th {
+    color: var(--heading);
+    font-weight: 600;
+}
+
+.entry-cover {
+    margin-bottom: 1.5rem;
+}
+
+.entry-cover img {
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+.entry-cover figcaption,
+.entry-cover p {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    color: var(--secondary);
+    text-align: center;
+}
+
+.paginav {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+}
+
+.paginav .title {
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+}
+
+/* ── Post cards (home, blog, categories, tags) ─────────────────── */
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+    gap: 1.75rem;
+}
+
+.post-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.post-card:hover,
+.post-card:focus-within {
+    transform: translateY(-3px);
+    border-color: var(--tertiary);
+    box-shadow: 0 2px 4px rgba(60, 40, 20, 0.05), 0 18px 36px -18px rgba(60, 40, 20, 0.25);
+}
+
+.post-card-link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+}
+
+.post-card-link:hover {
+    color: inherit;
+}
+
+.post-card-media {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: var(--entry);
+    border-bottom: 1px solid var(--border);
+}
+
+.post-card-media .entry-cover {
+    margin: 0;
+    height: 100%;
+}
+
+.post-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+    border-radius: 0;
+    transition: transform 0.4s ease;
+}
+
+.post-card:hover .post-card-media img {
+    transform: scale(1.02);
+}
+
+[data-theme="dark"] .post-card-media img,
+[data-theme="dark"] .entry-cover img,
+[data-theme="dark"] .post-content img {
+    filter: brightness(0.88);
+}
+
+.post-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1.25rem 1.4rem 1.3rem;
+}
+
+.post-card-title {
+    margin: 0 0 0.55rem;
+    font-size: 1.3rem;
+    line-height: 1.25;
+    font-weight: 500;
+    color: var(--heading);
+    transition: color 0.15s ease;
+}
+
+.post-card:hover .post-card-title {
+    color: var(--accent);
+}
+
+.post-card-draft {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    color: var(--secondary);
+    vertical-align: middle;
+}
+
+.post-card-desc {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    line-height: 1.55;
+    color: var(--secondary);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.post-card-meta {
+    margin-top: auto;
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    color: var(--secondary);
+}
+
+/* Featured (newest) post on the homepage: image beside text */
+.post-card--featured {
+    margin-bottom: 1.75rem;
+}
+
+@media (min-width: 820px) {
+    .post-card--featured .post-card-link {
+        flex-direction: row;
+    }
+
+    .post-card--featured .post-card-media {
+        flex: 0 0 58%;
+        border-bottom: none;
+        border-right: 1px solid var(--border);
+    }
+
+    .post-card--featured .post-card-body {
+        justify-content: center;
+        padding: 2rem 2.4rem;
+    }
+
+    .post-card--featured .post-card-title {
+        font-size: 1.9rem;
+        line-height: 1.15;
+        letter-spacing: -0.015em;
+    }
+
+    .post-card--featured .post-card-desc {
+        font-size: 1.05rem;
+        -webkit-line-clamp: 5;
+    }
+
+    .post-card--featured .post-card-meta {
+        margin-top: 0.5rem;
+    }
+}
+
+/* ── Plain list entries (sections without cards) ──────────────── */
+.post-entry {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-card);
+}
+
+.post-entry .entry-header h2 {
+    font-size: 1.4rem;
+}
+
+/* ── Pagination ───────────────────────────────────────────────── */
+.pagination {
+    margin-top: 2.5rem;
+}
+
+.pagination a {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 500;
+    background: var(--heading);
+    color: var(--theme);
 }
 
 /* ── Trade card (journal entries) ─────────────────────────────── */
@@ -87,29 +515,32 @@ pre code {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin: 0 0 1.5rem;
+    margin: 0 0 2.25rem;
 }
 
 .blog-cat-btn {
     display: inline-block;
     border: 1px solid var(--border);
-    background: var(--entry);
+    background: transparent;
     color: var(--primary);
-    border-radius: var(--radius);
-    padding: 0.4rem 0.9rem;
-    font-size: 0.85em;
+    border-radius: 999px;
+    padding: 0.4rem 1rem;
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    font-weight: 500;
     text-decoration: none;
+    transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
 }
 
 .blog-cat-btn:hover {
-    border-color: #C96442;
-    color: #C96442;
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
 .blog-cat-btn.active {
-    background: #C96442;
-    border-color: #C96442;
-    color: #fff;
+    background: var(--heading);
+    border-color: var(--heading);
+    color: var(--theme);
 }
 
 /* ── Post categories (distinct from tags) ────────────────────────── */
@@ -118,7 +549,7 @@ pre code {
 }
 
 .post-categories a {
-    background: #C96442;
+    background: var(--accent);
     color: #fff;
     font-weight: 600;
 }
@@ -128,29 +559,47 @@ pre code {
 }
 
 /* ── Site-wide contact (footer) ──────────────────────────────────── */
+.footer {
+    margin-top: 4rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--border);
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    color: var(--secondary);
+}
+
+.footer a {
+    color: var(--secondary);
+}
+
+.footer a:hover {
+    color: var(--accent);
+}
+
 .site-contact {
     max-width: var(--main-width);
-    margin: 0 auto;
+    margin: 0 auto 0.4rem;
     padding: 0 var(--gap);
-    font-size: 0.85em;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
     text-align: center;
 }
 
 .site-contact a {
-    color: var(--primary);
-    text-decoration: underline;
+    color: var(--heading);
 }
 
 /* ── Site-wide disclaimer (footer) ───────────────────────────────── */
 .site-disclaimer {
-    max-width: var(--main-width);
-    margin: 0 auto 1.5rem;
+    max-width: 640px;
+    margin: 1.4rem auto 1.5rem;
     padding: 0 var(--gap);
-    font-size: 0.75em;
-    line-height: 1.5;
+    font-size: 0.74rem;
+    line-height: 1.6;
     color: var(--secondary);
     text-align: center;
-    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-family: var(--font-sans);
+    opacity: 0.85;
 }
 
 .site-disclaimer a {
@@ -416,7 +865,7 @@ figure.illustration.float-right {
 .contact-field input:focus,
 .contact-field select:focus,
 .contact-field textarea:focus {
-    outline: 2px solid #C96442;
+    outline: 2px solid var(--accent);
     outline-offset: 1px;
 }
 
@@ -430,7 +879,7 @@ figure.illustration.float-right {
     font-weight: 600;
     font-size: 0.95em;
     color: #fff;
-    background: #C96442;
+    background: var(--accent);
     border: none;
     border-radius: var(--radius);
     padding: 0.6rem 1.4rem;
@@ -453,7 +902,7 @@ figure.illustration.float-right {
     letter-spacing: 0.08em;
     font-size: 0.8em;
     font-weight: 600;
-    color: #C96442;
+    color: var(--accent);
     margin-bottom: 0.4em;
 }
 
@@ -486,7 +935,7 @@ figure.illustration.float-right {
 }
 
 .journal-cta-primary {
-    background: #C96442;
+    background: var(--accent);
     color: #fff;
 }
 
@@ -501,8 +950,8 @@ figure.illustration.float-right {
 }
 
 .journal-cta-secondary:hover {
-    border-color: #C96442;
-    color: #C96442;
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
 .journal-diff-grid,
@@ -526,7 +975,7 @@ figure.illustration.float-right {
 }
 
 .journal-pricing-tier-paid {
-    border-color: #C96442;
+    border-color: var(--accent);
 }
 
 .journal-gallery figure {
@@ -543,7 +992,7 @@ figure.illustration.float-right {
 
 .journal-gallery img:hover,
 .journal-gallery img:focus-visible {
-    border-color: #C96442;
+    border-color: var(--accent);
 }
 
 .journal-gallery figcaption {
@@ -619,8 +1068,8 @@ figure.illustration.float-right {
 .journal-lightbox-close:hover,
 .journal-lightbox-prev:hover,
 .journal-lightbox-next:hover {
-    background: #C96442;
-    border-color: #C96442;
+    background: var(--accent);
+    border-color: var(--accent);
 }
 
 .journal-lightbox-close {
@@ -839,40 +1288,103 @@ figure.illustration.float-right {
     }
 }
 
+/* ── Homepage sections ──────────────────────────────────────────── */
+.is-home .post-content {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
 .cht-find-section {
-    background: var(--theme);
-    border-top: 1px solid var(--border);
-    margin: 0 calc(-1 * var(--gap));
-    padding: 3rem var(--gap) 1rem;
+    padding: 4.5rem 0 1rem;
 }
 
-/* ── "What you'll find here" cards ────────────────────────────────
-   One consistent outline per card (no fill) and the site's one
-   accent colour for every title/icon - same treatment for all six,
-   including Journal, instead of a different tint per item. */
-.cht-recent-posts-heading {
-    margin-top: 3rem;
-    padding-top: 1.5rem;
+.cht-find-section .section-title {
+    margin: 0 0 2rem;
+}
+
+.cht-find-section .section-kicker {
+    margin-bottom: 0.5rem;
+}
+
+.post-content a.find-card,
+.post-content a.find-card:hover {
+    text-decoration: none;
+}
+
+.home-latest {
+    margin-top: 4.5rem;
+    padding-top: 3.5rem;
     border-top: 1px solid var(--border);
 }
 
+/* ── "What you'll find here" tiles ────────────────────────────────
+   Each tile is one link: icon, title, a single sentence, and a quiet
+   call to action. No inline links inside, so nothing competes. */
 .find-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
     gap: 1.25rem;
-    margin-top: 1.5rem;
 }
 
+.post-content .find-card,
 .find-card {
-    background: var(--entry);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.6rem 1.6rem 1.4rem;
+    background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    padding: 1.2rem 1.4rem;
+    box-shadow: var(--shadow-card);
+    color: var(--content);
+    text-decoration: none;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.find-card .find-here-icon,
-.find-card strong a {
-    color: #C96442;
+.find-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--tertiary);
+    color: var(--content);
+    box-shadow: 0 2px 4px rgba(60, 40, 20, 0.05), 0 18px 36px -18px rgba(60, 40, 20, 0.25);
+}
+
+.find-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.6rem;
+    height: 2.6rem;
+    margin-bottom: 0.5rem;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    color: var(--accent);
+}
+
+.find-title {
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--heading);
+}
+
+.find-desc {
+    font-size: 1rem;
+    line-height: 1.55;
+    color: var(--secondary);
+}
+
+.find-more {
+    margin-top: auto;
+    padding-top: 0.6rem;
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--accent);
+}
+
+.find-card:hover .find-more {
+    color: var(--accent-strong);
 }
 
 /* Frosted/translucent so the photo band shows through - position is
@@ -893,14 +1405,34 @@ figure.illustration.float-right {
    site, which read as too washed-out against a bright photo. Give
    them the (now-charcoal) heading colour instead for real contrast;
    logo text matches, so the whole bar reads as one consistent colour. */
-.header-nav .menu a,
+.header-nav {
+    max-width: calc(var(--wide-width) + var(--gap) * 2);
+}
+
 .logo a {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: var(--heading);
+}
+
+.header-nav .menu a {
+    font-family: var(--font-sans);
+    font-size: 0.88rem;
+    font-weight: 500;
     color: var(--primary);
+    transition: color 0.15s ease;
 }
 
 .header-nav .menu a:hover,
 .logo a:hover {
-    color: #C96442;
+    color: var(--accent);
+}
+
+.header-nav .menu .active {
+    color: var(--heading);
+    border-bottom: 1.5px solid var(--accent);
 }
 
 /* Hamburger menu for narrow screens. PaperMod's own nav is a plain
@@ -934,6 +1466,10 @@ figure.illustration.float-right {
 }
 
 @media (max-width: 900px) {
+    .header-nav {
+        align-items: center;
+    }
+
     .nav-toggle {
         display: flex;
     }

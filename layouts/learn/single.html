@@ -11,7 +11,9 @@
     {{- end }}
   </header>
 
+  <div class="post-content">
   {{ .Content }}
+  </div>
 
   {{- if in (slice "elliott-waves" "fair-value-gaps") $slug }}
   <p class="learn-see-also">See also: <a href="{{ "tools/" | absURL }}">Tools</a> — indicators that help with this on a live chart.</p>

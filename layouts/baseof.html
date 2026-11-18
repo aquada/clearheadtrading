@@ -16,10 +16,11 @@
     {{- partial "head.html" . }}
 </head>
 
+{{- $wide := or .IsHome (and (eq .Kind "section") (eq .Section "blog")) (eq .Kind "term") }}
 {{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) }}
-<body class="list" id="top">
+<body class="list{{ if $wide }} is-wide{{ end }}{{ if .IsHome }} is-home{{ end }}" id="top">
 {{- else }}
-<body id="top">
+<body class="is-single" id="top">
 {{- end }}
     {{ partialCached "header.html" . .Page -}}
     {{- if .IsHome }}

@@ -12,54 +12,15 @@ heroTextRight:
   - "I trade live, every day, London and New York Open. This is what I use, what I build, and what I write about."
 ---
 
-<div class="cht-find-section">
-
-## What you'll find here
-
+<section class="cht-find-section">
+<p class="section-kicker">Explore</p>
+<h2 class="section-title">What you'll find here</h2>
 <div class="find-grid">
-
-<div class="find-card find-card--blog">
-
-<svg class="find-here-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>**[Blog →](/blog)**
-Trades worth writing about, articles on process and mindset, occasional market notes, and a trader interview series. Not tips. Not calls.
-
+<a class="find-card" href="/blog/"><span class="find-icon"><svg width="22" height="22" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="find-title">Blog</span><span class="find-desc">Trades worth writing about, process and mindset, weekly market notes, and a trader interview series. Not tips. Not calls.</span><span class="find-more">Read the blog →</span></a>
+<a class="find-card" href="/tools/"><span class="find-icon"><svg width="22" height="22" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span><span class="find-title">Tools</span><span class="find-desc">First-hand guides to the for-exe.com tools I use in live trading. Code BARECHART gets a 3-year licence at the 1-year price.</span><span class="find-more">See the tools →</span></a>
+<a class="find-card" href="/prop-firms/compare/"><span class="find-icon"><svg width="22" height="22" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span><span class="find-title">Prop Firms</span><span class="find-desc">Compare funded trading accounts by cost, drawdown, payout and EA/algo permission.</span><span class="find-more">Compare firms →</span></a>
+<a class="find-card" href="/brokers/compare/"><span class="find-icon"><svg width="22" height="22" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><span class="find-title">Brokers</span><span class="find-desc">Compare forex and CFD brokers by regulation, spreads, commission and EA/algo permission.</span><span class="find-more">Compare brokers →</span></a>
+<a class="find-card" href="/journal/"><span class="find-icon"><svg width="22" height="22" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="10" y1="7" x2="15" y2="7"/><line x1="10" y1="11" x2="15" y2="11"/></svg></span><span class="find-title">Journal</span><span class="find-desc">The performance-journaling app behind the numbers. Log trades with their context, then see which patterns drive your results.</span><span class="find-more">Explore the journal →</span></a>
+<a class="find-card" href="/services/"><span class="find-icon"><svg width="22" height="22" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span><span class="find-title">Services</span><span class="find-desc">Custom MT5 development: EAs, performance dashboards and prop firm compliance tools built around your rules.</span><span class="find-more">Work with me →</span></a>
 </div>
-
-<div class="find-card find-card--tools">
-
-<svg class="find-here-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>**[Tools →](/tools)**
-First-hand guides to the [for-exe.com](https://for-exe.com) tools I use in live trading — eWavesHarmonics and Advanced Trade Manager. Use code **BARECHART** for a 3-year licence at 1-year price.
-
-</div>
-
-<div class="find-card find-card--propfirms">
-
-<svg class="find-here-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>**[Prop Firms →](/prop-firms/compare/)**
-Compare funded trading accounts — filter by cost, drawdown, payout, and EA/algo permission.
-
-</div>
-
-<div class="find-card find-card--brokers">
-
-<svg class="find-here-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>**[Brokers →](/brokers/compare/)**
-Compare forex/CFD brokers — filter by regulation, spreads, commission, and EA/algo permission.
-
-</div>
-
-<div class="find-card find-card--journal">
-
-<svg class="find-here-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="10" y1="7" x2="15" y2="7"/><line x1="10" y1="11" x2="15" y2="11"/></svg>**[Journal →](/journal/)**
-The performance-journaling app behind the numbers — log trades with price, size, timing, and behavioural context, then see which patterns actually drive your results.
-
-</div>
-
-<div class="find-card find-card--services">
-
-<svg class="find-here-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>**[Services →](/services)**
-Custom MT5 development — EAs, performance dashboards, and prop firm compliance tools built around your rules and logic. [Get in touch](/contact/).
-
-</div>
-
-</div>
-
-</div>
+</section>

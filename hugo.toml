@@ -2,7 +2,6 @@ baseURL = "https://clearheadtrading.com/"
 title = "Clear Head Trading"
 theme = "PaperMod"
 locale = "en-us"
-paginate = 10
 enableRobotsTXT = true
 buildDrafts = false
 buildFuture = false
@@ -85,3 +84,6 @@ googleAnalytics = "G-PEDMYR1V0K"
   changefreq = "weekly"
   filename = "sitemap.xml"
   priority = 0.5
+
+[pagination]
+  pagerSize = 12

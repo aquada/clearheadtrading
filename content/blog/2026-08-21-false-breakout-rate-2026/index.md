@@ -5,7 +5,7 @@ draft: false
 description: "GER40 and Nasdaq are posting their highest false-breakout rates on record this year, which helps explain why breakout setups have felt harder to trust, and why waiting for a genuine rejection has been paying off more than usual."
 cover:
   image: "false-breakout-rate-2026.png"
-  alt: "Bar chart comparing 2026 false-breakout rate against the 2021-2025 range for GER40 and Nasdaq, both at record highs in 2026"
+  alt: "Chart comparing the 2026 false-breakout rate with the 2021-2025 range: GER40 61.3% against 46.9-54.8%, Nasdaq 57.6% against 44.9-54.0%, both the highest on record"
   caption: "GER40 and Nasdaq are both posting the highest false-breakout rate of the whole measured period in 2026"
 categories: ["Guides"]
 tags: ["breakouts", "false breakouts", "GER40", "Nasdaq", "price action"]

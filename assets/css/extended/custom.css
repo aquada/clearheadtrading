@@ -1387,6 +1387,27 @@ figure.illustration.float-right {
     color: var(--accent-strong);
 }
 
+/* Comparisons tile holds two destinations, so it isn't one link itself */
+.find-card--split:hover {
+    transform: none;
+}
+
+.find-card--split .find-more {
+    display: flex;
+    gap: 1.4rem;
+}
+
+.post-content .find-card--split .find-more a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.post-content .find-card--split .find-more a:hover {
+    color: var(--accent-strong);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
 /* Frosted/translucent so the photo band shows through - position is
    handled by the .cht-banner-fixed wrapper around it now, not here. */
 .header {

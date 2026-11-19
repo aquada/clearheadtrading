@@ -3,6 +3,13 @@
   "name": "clearheadtrading",
   "main": "worker/index.js",
   "compatibility_date": "2026-11-01",
+  // Live domain. Routes (not custom domains) so the switch from Netlify was an
+  // in-place edit of the proxied A records, with no gap in DNS. Deploys
+  // override routes set anywhere else, so they must stay listed here.
+  "routes": [
+    { "pattern": "clearheadtrading.com/*", "zone_name": "clearheadtrading.com" },
+    { "pattern": "www.clearheadtrading.com/*", "zone_name": "clearheadtrading.com" }
+  ],
   "assets": {
     "directory": "./public",
     "binding": "ASSETS",

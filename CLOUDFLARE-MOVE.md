@@ -61,39 +61,42 @@ Done 2026-11-19: hook "GitHub scheduled publish" (main), secret
   `gh secret set` needs a prompt that doesn't work through `!`.)
 
 ## 5. Add the domain to Cloudflare (Free plan)
-DNSSEC is not on (checked: no DS record), so the switch is safe.
-- If Cloudflare offers "managed robots.txt" or AI-crawler blocking while adding
-  the zone, that's your call; it adds rules to the site's robots.txt. Tell
-  Claude what you chose so step 7 checks the result.
-- Add `clearheadtrading.com`. Compare the scanned records against this list,
-  which is what Netlify DNS serves today (checked 2026-11-19). Set everything to
-  **DNS only** (grey cloud), and add anything missing. The DKIM record is the one most often missed.
+Done by Claude via the Cloudflare MCP server, 2026-11-19. Zone
+`clearheadtrading.com` (id `b4cfc6b56b06c47c8446f796451b5c9e`), created without
+the scan, holding exactly these records, all DNS only:
 
-  | Type | Name | Value |
-  |---|---|---|
-  | MX | @ | `london.mxroute.com` priority 10 |
-  | MX | @ | `london-relay.mxroute.com` priority 20 |
-  | TXT | @ | `v=spf1 include:mxroute.com -all` |
-  | TXT | @ | `google-site-verification=uyx4kJn9kZZShq8wMFi3bUmNz5zldK4D4nt5PIz5IlY` |
-  | TXT | x._domainkey | DKIM key below |
-  | A | @ and www | Netlify's (54.232.119.62 today). Leave these; step 6 replaces them |
+| Type | Name | Value |
+|---|---|---|
+| MX | @ | `london.mxroute.com` priority 10 |
+| MX | @ | `london-relay.mxroute.com` priority 20 |
+| TXT | @ | `v=spf1 include:mxroute.com -all` |
+| TXT | @ | `google-site-verification=uyx4kJn9kZZShq8wMFi3bUmNz5zldK4D4nt5PIz5IlY` |
+| TXT | x._domainkey | MXroute DKIM key (copied exactly) |
+| A | @ and www | 54.232.119.62 (Netlify) until step 6 |
+| A | journal | 54.232.119.62 (CHT Journal, still on Netlify). To become a CNAME to its `*.netlify.app` name once Dan supplies it |
 
-  DKIM value (paste as one string, no quotes):
-  ```
-  v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwiThXo4WuEtZSDZZkRpQgkoJ2EmXW9/Eg4y2qa0gjvk+cKdN+oI2dvk5pvQoSXYByH2ZDTPHRPips55R2bY6Pd2jZPFePap4KCBYzXB9ucRu/rOaTFqIEGjk5WWxUqj3QmJ6O0IZlnQw1a3IyZ31TR432LY1161xXP6lPcHHI0iFi7898qDuoSovC8s8BwgwS2sik6g7m+M0NMt/04H6Ou6u1VVvvi9O9O7jQe4Ck/lPN1K3OH/HJFxJTlBRlsWe3u2vcU5nuYxBnRlsEkyv7ZILlgoiEGafsLzJXZTt7rHPhlbDV/FRQZIICO5bl6MsPBebCia5CIBQ3O2P/z4z3wIDAQAB
-  ```
-  Also look in Netlify → Domains → clearheadtrading.com → DNS records for
-  anything not on this list. Only records someone queries show up from outside.
-- Porkbun → clearheadtrading.com → Nameservers → replace the four
-  `dnsN.p05.nsone.net` with the two Cloudflare gives you.
-- Wait for Cloudflare to email you that the zone is active.
+DNSSEC is off on both sides. AI crawler blocking, managed robots.txt and bot
+fight mode are all off (AI crawlers stay allowed, Dan's call). Always Use HTTPS
+is on (only affects proxied traffic). Free plan can't lower the SOA negative
+TTL, hence the gap-free plan in step 6.
 
-## 6. As soon as the zone is active (do this promptly)
-- Worker → Settings → Domains & Routes → add custom domains
-  `clearheadtrading.com` and `www.clearheadtrading.com`. It will ask you to delete
-  the old A records first. Do that and attach the domains straight away: last time, resolvers
-  that asked during the gap cached "no record" for 30 minutes (the Pi-holes included).
-- SSL/TLS → Edge Certificates → **Always Use HTTPS**: on.
+`licensing.clearheadtrading.com` (the licensing EA's API) doesn't exist yet;
+give it a record here when it goes live.
+
+- **You:** Porkbun → clearheadtrading.com → Nameservers → replace whatever is
+  there with `elle.ns.cloudflare.com` and `todd.ns.cloudflare.com`. Nothing
+  changes for visitors: Cloudflare answers with the same records as Netlify.
+- Wait for the zone to go active (Claude can check).
+
+## 6. Switch the site to the Worker (Claude, once the zone is active)
+Gap-free, instead of the dashboard's delete-and-attach custom domain:
+1. Wait until the zone's Universal SSL certificate is active.
+2. Add `routes` for `clearheadtrading.com/*` and `www.clearheadtrading.com/*`
+   to `wrangler.jsonc` and push (deploys override routes added any other way,
+   so they live in the config). With the records still DNS only, the routes
+   don't affect anyone yet.
+3. Edit (not delete) the `@` and `www` A records to `192.0.2.1`, proxied. Each
+   is a single edit, so there's never a moment with no record.
 
 ## 7. Verify (Claude)
 Certificate, http → https, www → bare, pages, 404, `/go/` links, contact page,

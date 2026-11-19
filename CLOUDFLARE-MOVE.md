@@ -19,7 +19,8 @@ that can be abandoned without harm.
 - Done 2026-11-19: `hello@`, `journal@` and `support@clearheadtrading.com` are
   MXroute forwarders to your main inbox (not Cloudflare Email Routing, which
   would replace the MXroute MX records). `noreply@` is left unforwarded. Expert
-  Spam Filtering is back on because of the forwarders.
+  Spam Filtering stayed off (MXroute only forces it for Gmail/Yahoo/AOL-type
+  destinations); turn it on if the main inbox isn't on MXroute itself.
 - Before pushing: send each of the three a test email from another account and
   check they arrive in the inbox, not spam.
 

@@ -16,9 +16,12 @@ that can be abandoned without harm.
 
 ## 1. Merge and push (Claude, after your review)
 - Merge `website-changes` into `main` and push. Netlify deploys it as usual.
-- Before pushing: create the `hello@` and `journal@clearheadtrading.com`
-  forwarders on MXroute (not Cloudflare Email Routing, which would replace the
-  MXroute MX records) and send each a test email from another account.
+- Done 2026-11-19: `hello@`, `journal@` and `support@clearheadtrading.com` are
+  MXroute forwarders to your main inbox (not Cloudflare Email Routing, which
+  would replace the MXroute MX records). `noreply@` is left unforwarded. Expert
+  Spam Filtering is back on because of the forwarders.
+- Before pushing: send each of the three a test email from another account and
+  check they arrive in the inbox, not spam.
 
 ## 2. Create the Worker (Cloudflare dashboard)
 - Workers & Pages → Create application → import `aquada/clearheadtrading`.

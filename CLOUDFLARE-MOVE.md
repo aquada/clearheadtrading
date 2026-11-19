@@ -20,7 +20,8 @@ that can be abandoned without harm.
   MXroute forwarders to your main inbox (not Cloudflare Email Routing, which
   would replace the MXroute MX records). `noreply@` is left unforwarded. Expert
   Spam Filtering stayed off (MXroute only forces it for Gmail/Yahoo/AOL-type
-  destinations); turn it on if the main inbox isn't on MXroute itself.
+  destinations). Leave it off: the main inbox is on MXroute too, so the
+  forwarding stays inside MXroute.
 - Before pushing: send each of the three a test email from another account and
   check they arrive in the inbox, not spam.
 

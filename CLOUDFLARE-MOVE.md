@@ -46,11 +46,15 @@ that can be abandoned without harm.
   fetched. Tell Claude rather than working around it.
 
 ## 3. Test the workers.dev copy
+Done 2026-11-19 (https://clearheadtrading.daniel-516.workers.dev): pages, 404,
+`/go/` 302s, cache headers, robots/noindex, sitemap identical to Netlify's.
 - Open `https://clearheadtrading.<your-subdomain>.workers.dev`. It may look
   partly unstyled, because the pages load CSS from the live domain. That's expected.
 - Check `/go/ftmo` (should go to FTMO), `/contact/`, and a made-up page (404).
 
 ## 4. Deploy hook for the Monday rebuild
+Done 2026-11-19: hook "GitHub scheduled publish" (main), secret
+`CLOUDFLARE_DEPLOY_HOOK` added, test run of the workflow queued a Cloudflare build.
 - Worker → Settings → Builds → Deploy Hooks → create one for `main`, copy the URL.
 - GitHub → aquada/clearheadtrading → Settings → Secrets and variables →
   Actions → New secret `CLOUDFLARE_DEPLOY_HOOK` = that URL. (Use the web page:

@@ -28,11 +28,14 @@ that can be abandoned without harm.
 ## 2. Create the Worker (Cloudflare dashboard)
 - Workers & Pages → Create application → import `aquada/clearheadtrading`.
 - Build command: `hugo --gc --minify`. Deploy command: `npx wrangler deploy`.
-- Afterwards, Settings → Build → Variables, add:
+- API token: create a new one for this site rather than reusing the
+  handcraftedpages build token (same permissions, but independent).
+- Build variables (Settings → **Build** → Variables and secrets, not the
+  runtime Variables and Secrets section):
   - `HUGO_VERSION` = `0.162.1` (otherwise it uses an old Hugo)
-  - `TZ` = `Africa/Johannesburg`
-  - `HUGO_ENV` = `production`
-  - `HUGO_ENABLEGITINFO` = `true`
+  - `HUGO_ENABLEGITINFO` = `true` (sitemap last-updated dates come from git)
+  - `TZ` = `Africa/Johannesburg` (keeps sitemap times in SAST, as now)
+  - Not `HUGO_ENV`: `hugo` already builds in production mode.
 - Check that the production branch is `main`, then retry the deployment so it uses the variables.
 - If the build complains about a missing theme, the PaperMod submodule wasn't
   fetched. Tell Claude rather than working around it.

@@ -73,7 +73,7 @@ the scan, holding exactly these records, all DNS only:
 | TXT | @ | `google-site-verification=uyx4kJn9kZZShq8wMFi3bUmNz5zldK4D4nt5PIz5IlY` |
 | TXT | x._domainkey | MXroute DKIM key (copied exactly) |
 | A | @ and www | 54.232.119.62 (Netlify) until step 6 |
-| A | journal | 54.232.119.62 (CHT Journal, still on Netlify). To become a CNAME to its `*.netlify.app` name once Dan supplies it |
+| A | journal | 75.2.60.5 (Netlify's load balancer: CHT Journal stays on Netlify until it moves too, planned separately in its own repo) |
 
 DNSSEC is off on both sides. AI crawler blocking, managed robots.txt and bot
 fight mode are all off (AI crawlers stay allowed, Dan's call). Always Use HTTPS
@@ -83,12 +83,13 @@ TTL, hence the gap-free plan in step 6.
 `licensing.clearheadtrading.com` (the licensing EA's API) doesn't exist yet;
 give it a record here when it goes live.
 
-- **You:** Porkbun → clearheadtrading.com → Nameservers → replace whatever is
-  there with `elle.ns.cloudflare.com` and `todd.ns.cloudflare.com`. Nothing
+- Done 2026-11-19 (zone active the same morning). Porkbun → clearheadtrading.com → Nameservers →
+  replaced with `elle.ns.cloudflare.com` and `todd.ns.cloudflare.com`. Nothing
   changes for visitors: Cloudflare answers with the same records as Netlify.
 - Wait for the zone to go active (Claude can check).
 
 ## 6. Switch the site to the Worker (Claude, once the zone is active)
+Done 2026-11-19 (`b4712a9` routes; records edited a few minutes later).
 Gap-free, instead of the dashboard's delete-and-attach custom domain:
 1. Wait until the zone's Universal SSL certificate is active.
 2. Add `routes` for `clearheadtrading.com/*` and `www.clearheadtrading.com/*`
@@ -99,12 +100,19 @@ Gap-free, instead of the dashboard's delete-and-attach custom domain:
    is a single edit, so there's never a moment with no record.
 
 ## 7. Verify (Claude)
-Certificate, http → https, www → bare, pages, 404, `/go/` links, contact page,
-MX/SPF/DKIM unchanged, a manual run of the scheduled-publish workflow, and a test
-email to yourself.
+Done 2026-11-19, all served by Cloudflare: Let's Encrypt certificate to Feb 2027,
+http → https, www → bare, pages, 404, both `/go/` links, robots `index, follow`,
+sitemap byte-identical to Netlify's, MX/SPF/DKIM/Google verification unchanged,
+journal still on Netlify, scheduled-publish workflow triggers a Cloudflare build.
+Pages load in about 0.2–0.7 s (Netlify: 1.3–2.3 s). The workers.dev address
+is now off (deploys disable it without `workers_dev` in the config).
+- **You:** send a test email from Proton to hello@ to confirm mail still flows.
 
 ## 8. After a week of no problems
-- Netlify: remove clearheadtrading.com from the site and its DNS zone (not
-  barechart.com's), and stop the site's auto-builds.
+- Netlify: remove clearheadtrading.com and www from the *website's* Netlify
+  site, stop its auto-builds, and delete the clearheadtrading.com DNS zone
+  (unused since the nameserver switch). Leave journal.clearheadtrading.com on
+  the journal's Netlify site until the journal itself moves, and leave
+  barechart.com alone.
 - Delete `netlify.toml`, the `NETLIFY_BUILD_HOOK` secret and its step in
   `scheduled-publish.yml`, and this file.

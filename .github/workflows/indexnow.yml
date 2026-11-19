@@ -4,7 +4,7 @@ name: IndexNow Submit
 # page URL whenever content or static assets change on main, so engines
 # don't have to wait for their own crawl schedule to notice new/updated
 # pages. Builds the site here (not against the live site) so the URL list
-# reflects what was just pushed, not whatever Netlify has deployed so far.
+# reflects what was just pushed, not whatever has been deployed so far.
 
 on:
   push:

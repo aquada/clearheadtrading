@@ -1,0 +1,5 @@
+# Affiliate redirects. Add one line per link only once the affiliate URL
+# is actually obtained. Do not add placeholder or unapproved links.
+# Cloudflare reads this file from the build output (public/_redirects).
+/go/ftmo         https://trader.ftmo.com/?affiliates=qgNoQuXELWNhkNtWSCCM  302
+/go/globalprime  https://globalprime.com/?refcode=115789                    302

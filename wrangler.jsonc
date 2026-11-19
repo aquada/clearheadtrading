@@ -1,0 +1,15 @@
+{
+  "$schema": "https://unpkg.com/wrangler/config-schema.json",
+  "name": "clearheadtrading",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    // The worker only needs to see requests so it can send www to the bare
+    // domain. Everything else is served straight from public/, where
+    // _redirects (the /go/ affiliate links) and _headers apply.
+    "run_worker_first": true
+  }
+}

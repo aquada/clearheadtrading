@@ -9,11 +9,12 @@ ShowToc: false
 
 Whether you're after custom EA work, spotted something wrong on the site, or just want to say hello, use the form below and I'll get back to you personally, usually within a couple of days.
 
-<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact/thanks/" class="contact-form">
-  <input type="hidden" name="form-name" value="contact" />
-  <p class="contact-hp" hidden>
-    <label>Don't fill this in if you're human: <input name="bot-field" /></label>
-  </p>
+<form name="contact" method="POST" action="https://api.web3forms.com/submit" class="contact-form">
+  <input type="hidden" name="access_key" value="993355ed-f5bd-4a18-87ae-d102d8e15a60" />
+  <input type="hidden" name="subject" value="New message from clearheadtrading.com" />
+  <input type="hidden" name="from_name" value="Clear Head Trading website" />
+  <input type="hidden" name="redirect" value="https://clearheadtrading.com/contact/thanks/" />
+  <input type="checkbox" name="botcheck" class="contact-hp" hidden style="display:none" tabindex="-1" autocomplete="off" />
 
   <div class="contact-field">
     <label for="contact-name">Name</label>

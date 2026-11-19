@@ -4,7 +4,7 @@ description: "How Clear Head Trading uses cookies and analytics, and what data i
 url: "/privacy/"
 ---
 
-Last updated: 10 July 2026.
+Last updated: 19 November 2026.
 
 Clear Head Trading is run by a single private trader. This page explains what data is collected when you visit and why.
 
@@ -15,6 +15,10 @@ This site uses Google Analytics to understand overall traffic — pages visited,
 ## Affiliate links
 
 Some links on this site (marked or routed through `/go/`) are affiliate links — if you sign up with a firm or broker through one, I may earn a commission at no extra cost to you. Clicking one of these links takes you to the partner's site, which will set its own cookies to track that the referral came from here. I don't control what those third-party sites do with your data once you're there — check their own privacy policy for that.
+
+## Contact form
+
+If you send a message through the [contact form](/contact/), what you type (your name, email address and message) is passed to me by email through [Web3Forms](https://web3forms.com). I only use it to reply to you. The site itself is served by [Cloudflare](https://www.cloudflare.com). Both have their own privacy policies covering how they handle data in transit and storage.
 
 ## What this site doesn't do
 

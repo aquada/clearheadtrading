@@ -8,16 +8,6 @@
   HUGO_ENABLEGITINFO = "true"
   TZ = "Africa/Johannesburg"
 
-# Affiliate redirects — add one entry per link only once the affiliate URL
-# is actually obtained. Do not add placeholder/unapproved links.
-[[redirects]]
-  from = "/go/ftmo"
-  to = "https://trader.ftmo.com/?affiliates=qgNoQuXELWNhkNtWSCCM"
-  status = 302
-  force = true
-
-[[redirects]]
-  from = "/go/globalprime"
-  to = "https://globalprime.com/?refcode=115789"
-  status = 302
-  force = true
+# Netlify is only the fallback host now (site moved to Cloudflare Workers
+# 2026-11). The /go/ affiliate redirects live in static/_redirects, which
+# both Netlify and Cloudflare read. Delete this file once Netlify is off.

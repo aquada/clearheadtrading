@@ -22,8 +22,8 @@ that can be abandoned without harm.
   Spam Filtering stayed off (MXroute only forces it for Gmail/Yahoo/AOL-type
   destinations). Leave it off: the main inbox is on MXroute too, so the
   forwarding stays inside MXroute.
-- Before pushing: send each of the three a test email from another account and
-  check they arrive in the inbox, not spam.
+- Tested 2026-11-19 from Proton: all three arrive (hello@ and journal@ took a
+  while on the first try, so a delay isn't a fault).
 
 ## 2. Create the Worker (Cloudflare dashboard)
 - Workers & Pages → Create application → import `aquada/clearheadtrading`.

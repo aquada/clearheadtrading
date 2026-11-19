@@ -27,7 +27,12 @@ that can be abandoned without harm.
 
 ## 2. Create the Worker (Cloudflare dashboard)
 - Workers & Pages → Create application → import `aquada/clearheadtrading`.
-- Build command: `hugo --gc --minify`. Deploy command: `npx wrangler deploy`.
+- Build command: `(git fetch --unshallow || true) && hugo --gc --minify --environment production`.
+  Deploy command: `npx wrangler deploy`.
+  Done 2026-11-19. Plain `hugo --gc --minify` built in non-production mode on
+  Cloudflare (every page `noindex, nofollow`, robots.txt `Disallow: /`) despite
+  `HUGO_ENV`, and its shallow clone gave every sitemap `lastmod` the latest
+  commit's date. With this command the sitemap is byte-identical to Netlify's.
 - API token: create a new one for this site rather than reusing the
   handcraftedpages build token (same permissions, but independent).
 - Build variables (Settings → **Build** → Variables and secrets, not the
@@ -53,6 +58,9 @@ that can be abandoned without harm.
 
 ## 5. Add the domain to Cloudflare (Free plan)
 DNSSEC is not on (checked: no DS record), so the switch is safe.
+- If Cloudflare offers "managed robots.txt" or AI-crawler blocking while adding
+  the zone, that's your call; it adds rules to the site's robots.txt. Tell
+  Claude what you chose so step 7 checks the result.
 - Add `clearheadtrading.com`. Compare the scanned records against this list,
   which is what Netlify DNS serves today (checked 2026-11-19). Set everything to
   **DNS only** (grey cloud), and add anything missing. The DKIM record is the one most often missed.

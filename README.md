@@ -7,7 +7,7 @@ Source for [clearheadtrading.com](https://clearheadtrading.com) — a Hugo stati
 - **Hugo** (extended, v0.162.1, set as the `HUGO_VERSION` build variable in Cloudflare) with the [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme as a git submodule under `themes/PaperMod`.
 - **Cloudflare Workers** (static assets) for hosting, moved from Netlify in November 2026. Workers Builds runs `hugo --gc --minify` and then `npx wrangler deploy`, which uploads `public/` (gitignored, not committed) as configured in `wrangler.jsonc`. `worker/index.js` only redirects www to the bare domain; everything else is served straight from `public/`.
 - `static/_redirects` holds the `/go/*` affiliate links and `static/_headers` the cache headers. Cloudflare reads both from the build output.
-- There's no contact form. `/contact/` lists `hello@clearheadtrading.com` (an MXroute forwarder) and Telegram, with email links that fill in the subject; journal ones start "CHT Journal:" so they can be filtered. The CHT Journal app's Feedback link opens `/contact/?from=journal:<page>`, which the page's script uses to fill in the journal subject.
+- There's no contact form. `/contact/` lists `hello@clearheadtrading.com` (an MXroute forwarder) and Telegram, with email links that fill in the subject. CHT Journal feedback goes to `journal@clearheadtrading.com` (also an MXroute forwarder) with a "CHT Journal:" subject, so it can be filtered. The CHT Journal app's Feedback link opens `/contact/?from=journal:<page>`, which the page's script uses to fill in the journal subject.
 - `netlify.toml` only remains while Netlify is kept as a fallback; delete it once Netlify is switched off.
 - No JS build step and no `package.json` — everything is plain Hugo templates/content.
 

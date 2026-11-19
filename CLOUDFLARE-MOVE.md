@@ -16,8 +16,9 @@ that can be abandoned without harm.
 
 ## 1. Merge and push (Claude, after your review)
 - Merge `website-changes` into `main` and push. Netlify deploys it as usual.
-- Before pushing: create the `hello@clearheadtrading.com` forwarder on MXroute
-  and send it a test email from another account.
+- Before pushing: create the `hello@` and `journal@clearheadtrading.com`
+  forwarders on MXroute (not Cloudflare Email Routing, which would replace the
+  MXroute MX records) and send each a test email from another account.
 
 ## 2. Create the Worker (Cloudflare dashboard)
 - Workers & Pages → Create application → import `aquada/clearheadtrading`.

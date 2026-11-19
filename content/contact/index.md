@@ -27,7 +27,7 @@ These open an email with the subject filled in, which helps me get back to you s
 <ul class="contact-topics">
   <li><a data-topic="ea" href="mailto:hello@clearheadtrading.com?subject=Clear%20Head%20Trading%3A%20EA%20development&amp;body=What%20I%27m%20trying%20to%20build%3A%0A%0AInstrument%20and%20timeframe%3A%0A%0AWhat%20I%27ve%20already%20tried%3A%0A">Custom EA or indicator development</a></li>
   <li><a data-topic="tools" href="mailto:hello@clearheadtrading.com?subject=Clear%20Head%20Trading%3A%20prop%20firms%20or%20brokers">The prop firms or brokers comparison</a></li>
-  <li><a data-topic="journal" href="mailto:hello@clearheadtrading.com?subject=CHT%20Journal%3A%20feedback">CHT Journal feedback</a></li>
+  <li><a data-topic="journal" href="mailto:journal@clearheadtrading.com?subject=CHT%20Journal%3A%20feedback">CHT Journal feedback</a></li>
   <li><a data-topic="site" href="mailto:hello@clearheadtrading.com?subject=Clear%20Head%20Trading%3A%20site%20feedback">Site feedback or a correction</a></li>
 </ul>
 
@@ -46,7 +46,7 @@ These open an email with the subject filled in, which helps me get back to you s
   var subject = "CHT Journal: feedback" + (page ? " (" + page + ")" : "");
   // Built from parts rather than read back from the link, so it still works
   // after Cloudflare's email obfuscation has rewritten the page's mailto links.
-  link.href = "mailto:" + "hello" + "@" + "clearheadtrading.com" +
+  link.href = "mailto:" + "journal" + "@" + "clearheadtrading.com" +
     "?subject=" + encodeURIComponent(subject);
   link.textContent = "Send feedback about CHT Journal" + (page ? " (" + page + ")" : "");
   var item = link.parentNode;

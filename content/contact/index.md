@@ -7,58 +7,50 @@ hideMeta: true
 ShowToc: false
 ---
 
-Whether you're after custom EA work, spotted something wrong on the site, or just want to say hello, use the form below and I'll get back to you personally, usually within a couple of days.
+Whether you're after custom EA work, spotted something wrong on the site, or just want to say hello, drop me an email or a message on Telegram. I read everything myself and usually reply within a couple of days.
 
-<form name="contact" method="POST" action="https://api.web3forms.com/submit" class="contact-form">
-  <input type="hidden" name="access_key" value="993355ed-f5bd-4a18-87ae-d102d8e15a60" />
-  <input type="hidden" name="subject" value="New message from clearheadtrading.com" />
-  <input type="hidden" name="from_name" value="Clear Head Trading website" />
-  <input type="hidden" name="redirect" value="https://clearheadtrading.com/contact/thanks/" />
-  <input type="checkbox" name="botcheck" class="contact-hp" hidden style="display:none" tabindex="-1" autocomplete="off" />
-
-  <div class="contact-field">
-    <label for="contact-name">Name</label>
-    <input type="text" id="contact-name" name="name" required>
+<div class="contact-options">
+  <div class="contact-option">
+    <span class="contact-option-label">Email</span>
+    <a class="contact-option-value" href="mailto:hello@clearheadtrading.com">hello@clearheadtrading.com</a>
   </div>
-
-  <div class="contact-field">
-    <label for="contact-email">Email</label>
-    <input type="email" id="contact-email" name="email" required>
+  <div class="contact-option">
+    <span class="contact-option-label">Telegram</span>
+    <a class="contact-option-value" href="https://t.me/danphillips" rel="noopener" target="_blank">@danphillips</a>
   </div>
+</div>
 
-  <div class="contact-field">
-    <label for="contact-reason">What's this about?</label>
-    <select id="contact-reason" name="reason">
-      <option value="EA development">Custom EA / indicator development</option>
-      <option value="Prop firms or brokers">Prop firms or brokers tool</option>
-      <option value="Journal feedback">CHT Journal feedback</option>
-      <option value="Site feedback">Site feedback or a correction</option>
-      <option value="Something else">Something else</option>
-    </select>
-  </div>
+## Writing about something specific?
 
-  <div class="contact-field">
-    <label for="contact-message">Message</label>
-    <textarea id="contact-message" name="message" rows="6" required placeholder="For EA work: what you're trying to build, what instrument and timeframe, and what you've already tried."></textarea>
-  </div>
+These open an email with the subject filled in, which helps me get back to you sooner.
 
-  <button type="submit" class="contact-submit">Send message</button>
-</form>
+<ul class="contact-topics">
+  <li><a data-topic="ea" href="mailto:hello@clearheadtrading.com?subject=Clear%20Head%20Trading%3A%20EA%20development&amp;body=What%20I%27m%20trying%20to%20build%3A%0A%0AInstrument%20and%20timeframe%3A%0A%0AWhat%20I%27ve%20already%20tried%3A%0A">Custom EA or indicator development</a></li>
+  <li><a data-topic="tools" href="mailto:hello@clearheadtrading.com?subject=Clear%20Head%20Trading%3A%20prop%20firms%20or%20brokers">The prop firms or brokers comparison</a></li>
+  <li><a data-topic="journal" href="mailto:hello@clearheadtrading.com?subject=CHT%20Journal%3A%20feedback">CHT Journal feedback</a></li>
+  <li><a data-topic="site" href="mailto:hello@clearheadtrading.com?subject=Clear%20Head%20Trading%3A%20site%20feedback">Site feedback or a correction</a></li>
+</ul>
 
 <script>
 (function () {
+  // The CHT Journal app's Feedback link opens /contact/?from=journal:<page>.
+  // Point the journal email at that page and move it to the top.
   var params = new URLSearchParams(window.location.search);
   var from = params.get("from");
   if (!from || from.indexOf("journal:") !== 0) return;
 
-  var page = from.slice("journal:".length);
-  var reason = document.getElementById("contact-reason");
-  var message = document.getElementById("contact-message");
+  var page = from.slice("journal:".length).slice(0, 80);
+  var link = document.querySelector('.contact-topics a[data-topic="journal"]');
+  if (!link) return;
 
-  if (reason) reason.value = "Journal feedback";
-  if (message && !message.value) {
-    message.value = "Feedback from CHT Journal (" + page + "):\n\n";
-    message.setSelectionRange(message.value.length, message.value.length);
-  }
+  var subject = "CHT Journal: feedback" + (page ? " (" + page + ")" : "");
+  // Built from parts rather than read back from the link, so it still works
+  // after Cloudflare's email obfuscation has rewritten the page's mailto links.
+  link.href = "mailto:" + "hello" + "@" + "clearheadtrading.com" +
+    "?subject=" + encodeURIComponent(subject);
+  link.textContent = "Send feedback about CHT Journal" + (page ? " (" + page + ")" : "");
+  var item = link.parentNode;
+  item.classList.add("contact-topic-current");
+  item.parentNode.insertBefore(item, item.parentNode.firstChild);
 })();
 </script>

@@ -90,7 +90,7 @@ Trading a prop firm challenge? Enable the module in Settings and attach trades t
 
 ## Feedback
 
-Spotted something wrong, or got an idea for what's missing? Use the Feedback link in the app sidebar, which opens the contact form.
+Spotted something wrong, or got an idea for what's missing? Use the Feedback link in the app sidebar, which opens the contact page.
 
 ---
 

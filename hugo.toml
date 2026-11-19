@@ -72,6 +72,10 @@ googleAnalytics = "G-PEDMYR1V0K"
     name = "Services"
     url = "/services/"
     weight = 50
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 60
 
 [taxonomies]
   tag = "tags"

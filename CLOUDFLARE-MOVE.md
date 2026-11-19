@@ -5,8 +5,9 @@ Amazon São Paulo, Cloudflare from Johannesburg). This follows the tested
 handcraftedpages.com runbook. barechart.com stays on Netlify until it expires.
 
 The code side is done on `website-changes`: `wrangler.jsonc`, `worker/index.js`
-(www → bare domain), `static/_redirects` (the `/go/` links), Web3Forms on the
-contact form, and the Monday workflow now calls a Cloudflare deploy hook.
+(www → bare domain), `static/_redirects` (the `/go/` links), and the Monday workflow now calls a
+Cloudflare deploy hook. The contact form is gone (email + Telegram instead), so
+there's no Netlify Forms dependency left.
 Checked locally with `wrangler dev`: pages, 404, `/go/` 302s, cache headers,
 www redirect.
 
@@ -15,8 +16,8 @@ that can be abandoned without harm.
 
 ## 1. Merge and push (Claude, after your review)
 - Merge `website-changes` into `main` and push. Netlify deploys it as usual.
-- Send yourself a test message through https://clearheadtrading.com/contact/.
-  It should land on the "Message sent" page and arrive by email from Web3Forms.
+- Before pushing: create the `hello@clearheadtrading.com` forwarder on MXroute
+  and send it a test email from another account.
 
 ## 2. Create the Worker (Cloudflare dashboard)
 - Workers & Pages → Create application → import `aquada/clearheadtrading`.
@@ -74,7 +75,7 @@ DNSSEC is not on (checked: no DS record), so the switch is safe.
 - SSL/TLS → Edge Certificates → **Always Use HTTPS**: on.
 
 ## 7. Verify (Claude)
-Certificate, http → https, www → bare, pages, 404, `/go/` links, contact form,
+Certificate, http → https, www → bare, pages, 404, `/go/` links, contact page,
 MX/SPF/DKIM unchanged, a manual run of the scheduled-publish workflow, and a test
 email to yourself.
 

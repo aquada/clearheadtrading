@@ -16,9 +16,9 @@ This site uses Google Analytics to understand overall traffic — pages visited,
 
 Some links on this site (marked or routed through `/go/`) are affiliate links — if you sign up with a firm or broker through one, I may earn a commission at no extra cost to you. Clicking one of these links takes you to the partner's site, which will set its own cookies to track that the referral came from here. I don't control what those third-party sites do with your data once you're there — check their own privacy policy for that.
 
-## Contact form
+## Getting in touch
 
-If you send a message through the [contact form](/contact/), what you type (your name, email address and message) is passed to me by email through [Web3Forms](https://web3forms.com). I only use it to reply to you. The site itself is served by [Cloudflare](https://www.cloudflare.com). Both have their own privacy policies covering how they handle data in transit and storage.
+If you email me or message me on Telegram, I only use what you send to reply to you. The site itself is served by [Cloudflare](https://www.cloudflare.com), whose own privacy policy covers how it handles data in transit.
 
 ## What this site doesn't do
 

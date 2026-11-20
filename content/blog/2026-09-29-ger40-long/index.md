@@ -1,7 +1,6 @@
 ---
 title: "GER40 Long - 2026-09-29"
 date: 2026-09-29
-draft: true
 description: "GER40 Long - 2026-09-29"
 categories: ["Trade Breakdowns"]
 cover:

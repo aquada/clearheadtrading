@@ -36,7 +36,8 @@ NASD (the Nasdaq-100) has support around 27,610, Friday's low, with a deeper flo
 
 ## Elsewhere this week
 
-Oil held fairly steady, with Brent around $98 a barrel and WTI near $91. Gold eased slightly to around $4,070 an ounce as the stronger inflation data and firmer rate expectations took some shine off safe havens. Bitcoin held broadly steady in the mid-$70,000s after the prior week's selloff. EURUSD stayed close to 1.114, with traders reluctant to take a strong view ahead of this week's Fed commentary and data.
+<!-- Corrected 2026-11-23: figures originally quoted were the Nov 6 closes, a week stale. Now Nov 13 closes vs Nov 6 (investing.com historical data): Brent 98.32 -> 95.84 (-2.5%), WTI 90.83 -> 87.29 (-3.9%), gold 4,074.90 -> 3,886.30 (-4.6%), EURUSD 1.1144 -> 1.1023 (-1.1%), bitcoin 75,823.7 -> 68,286.3 (-9.9%), then 65,350.9 on Sunday Nov 15. -->
+Oil slipped back across the week, with Brent down 2.5% to about $95.80 a barrel and WTI down 3.9% to around $87.30. Gold fell 4.6% to around $3,886 an ounce, as the stronger inflation data and firmer expectations of a rise in rates took the shine off it. Bitcoin had a rough week, falling about 10% to around $68,300 by Friday and slipping further to near $65,000 over the weekend. EURUSD eased about 1% to 1.102 as the dollar firmed, with traders reluctant to take a strong view ahead of this week's Fed commentary and data.
 
 ## The calendar
 

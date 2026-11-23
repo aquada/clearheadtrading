@@ -1495,3 +1495,22 @@ figure.illustration.float-right {
         padding: 0.5rem 0.2rem;
     }
 }
+
+/* Black Friday banner (remove with layouts/_partials/promo-banner.html) */
+.promo-banner {
+    /* The home hero is pulled up under the header with a negative margin, so
+       the banner needs its own stacking order or the hero paints over it. */
+    position: relative;
+    z-index: 3;
+    background: var(--accent-soft);
+    border-bottom: 1px solid var(--border);
+    color: var(--primary);
+    text-align: center;
+    padding: 9px 16px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+.promo-banner[hidden] { display: none; }
+.promo-banner p { margin: 0; }
+.promo-banner a { color: var(--accent-strong); text-decoration: underline; }
+:root[data-theme="dark"] .promo-banner { background: var(--code-bg); }

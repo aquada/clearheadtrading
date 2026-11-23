@@ -1,0 +1,13 @@
+{{- /* Black Friday banner for CHT Journal. Hidden until the script shows it,
+and only before the code's expiry (2026-12-08T12:00Z, the end of 7 Dec in the
+last timezone), so it removes itself without a rebuild. Remove this partial and
+its baseof.html line after the sale. */ -}}
+<div class="promo-banner" id="promo-banner" hidden>
+    <p>Black Friday: 50% off your first 3 months of <a href="/journal/">CHT Journal</a> paid. Use code <strong>BLACKFRIDAY50</strong> at checkout until 7 December.</p>
+</div>
+<script>
+    (function () {
+        var el = document.getElementById('promo-banner');
+        if (el && Date.now() < Date.parse('2026-12-08T12:00:00Z')) el.hidden = false;
+    })();
+</script>

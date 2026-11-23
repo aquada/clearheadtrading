@@ -22,6 +22,7 @@
 {{- else }}
 <body class="is-single" id="top">
 {{- end }}
+    {{- partial "promo-banner.html" . }}
     {{ partialCached "header.html" . .Page -}}
     {{- if .IsHome }}
     <div class="hero-section" id="hero-section">

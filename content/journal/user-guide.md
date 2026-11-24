@@ -111,7 +111,7 @@ Stats goes deeper still, with cost-of-mistake and cost-of-entry-emotion breakdow
 Three more look at how trades left you feeling and what came next:
 
 - **Emotion afterwards × process** shows whether you're reacting to how you traded or just to the result.
-- **Your next trade** shows how the next trade you opened within 24 hours went, first after a clean win against a clean loss, then by how the last one left you feeling. In a clean trade you followed your plan with no mistake, so any difference between the two is about the result, not how you traded.
+- **How one trade affects the next** shows how your next trade went, if you opened it within 24 hours of the last one closing. The first table asks whether you trade differently after a loss than after a win, when the last trade followed your plan with no mistake. The second asks whether how the last trade left you feeling carries into the next. "Times" is how often it happened, and feelings that happened fewer than 3 times aren't shown.
 - **Entry → afterwards** lists your most common pairs of feelings going in and coming out, with the average result.
 
 They need a fair number of trades before the patterns mean much.

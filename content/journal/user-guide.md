@@ -108,10 +108,10 @@ Stats goes deeper still, with cost-of-mistake and cost-of-entry-emotion breakdow
 - **Disciplined vs off-plan** puts the two side by side: number of trades, win rate, average result, and the emotions you most often logged at entry. Disciplined means you followed your plan with no mistake logged. Off-plan means you broke it or logged a mistake. Trades you haven't marked aren't counted.
 - **Disciplined trades by week** shows the share of your marked trades that were disciplined, so you can see whether it's improving. It switches to months once you have more than a year of trades.
 
-Three more use the emotion you log afterwards:
+Three more look at how trades left you feeling and what came next:
 
 - **Emotion afterwards × process** shows whether you're reacting to how you traded or just to the result.
-- **Your next trade** shows how the next trade you opened within 24 hours went, grouped by how the last one left you feeling.
+- **Your next trade** shows how the next trade you opened within 24 hours went, first after a clean win against a clean loss, then by how the last one left you feeling. In a clean trade you followed your plan with no mistake, so any difference between the two is about the result, not how you traded.
 - **Entry → afterwards** lists your most common pairs of feelings going in and coming out, with the average result.
 
 They need a fair number of trades before the patterns mean much.

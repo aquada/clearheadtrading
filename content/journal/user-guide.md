@@ -9,7 +9,7 @@ ShowToc: true
 
 CHT Journal is a trade journal and performance analytics tool, and it's built around one idea: R first, dollars second. Log a win, a loss, a mistake, or how you felt going into a trade, and it gets measured as a multiple of what you risked instead of a dollar figure, so a trader risking £50 a trade and one risking £5,000 can compare their real edge on the same scale.
 
-Staying profitable takes three things at once — an edge, risk sizing that survives a losing streak, and the discipline to execute both under pressure — and CHT Journal is built to make all three visible, not just to total up your P&L. That third one is the one most journals skip, so emotion, confidence, and mistakes get logged as fields next to the trade itself rather than left to memory, because they're usually the ones quietly deciding whether the other two hold up.
+Staying profitable takes three things at once — an edge, risk sizing that survives a losing streak, and the discipline to execute both under pressure — and CHT Journal is built to make all three visible, not just to total up your P&L. That third one is the one most journals skip, so your emotion at entry and afterwards, confidence, and mistakes get logged as fields next to the trade itself rather than left to memory, because they're usually the ones quietly deciding whether the other two hold up.
 
 ## Getting started
 
@@ -42,17 +42,41 @@ How much you log per trade is up to you, and it's changeable in Settings wheneve
 | Instrument, direction, entry/exit, size, R, P&L | Shown | Shown | Shown |
 | Setup | Shown | Shown | Required |
 | Notes | Shown | Shown | Shown |
-| Mistake, emotion, confidence | Hidden | Shown | Required |
+| Mistake, emotion at entry, confidence | Hidden | Shown | Required |
+| Emotion afterwards | Hidden | Shown | Shown (never required) |
 | Entry / exit / trade-management ratings | Hidden | Shown | Required |
 | Thesis, lesson learned, followed-my-plan, MAE/MFE | Hidden | Shown | Shown (never required) |
 
 - **Simple** — price in, price out, for anyone who just wants a P&L log without the behavioural work.
 - **Normal** — everything shown, nothing forced. This is the default.
-- **Strict** — nothing saves until setup, mistake, emotion, confidence, and all three post-trade ratings have been logged deliberately. For traders who want the habit enforced rather than left optional.
+- **Strict** — nothing saves until setup, mistake, emotion at entry, confidence, and all three post-trade ratings have been logged deliberately. For traders who want the habit enforced rather than left optional.
 
 ### R-multiple
 
 What you made or lost, expressed as a multiple of what you risked. Risk £100 and make £200, and that's +2R regardless of account size or instrument, which is why the equity curve, the streaks, and the trading score are all built around R rather than currency.
+
+### Emotion at entry and afterwards
+
+There are two emotion fields, because how a trade felt going in and how it left you feeling are different things.
+
+- **Emotion at entry** is how you felt going in, before you knew the result. If you're logging a trade later, such as one that came in by import or auto-sync, go back to that moment rather than how it feels now.
+- **Emotion afterwards** is how the trade left you feeling once it was closed. It sits in the post-trade review section and it's optional.
+
+A clean trade that loses can feel very different by the time you sit down to review it. Keeping the two apart stops that feeling rewriting how you felt when you took it.
+
+### Managing your tags
+
+Setup, emotion, and mistake tags can all be changed in Settings.
+
+- **Setup tags** start empty. Add the setups you actually trade.
+- **Emotion tags** have separate lists for at entry and afterwards. Remove the ones you don't use and add up to 12 of your own to each.
+- **Mistake tags** work the same way, also with up to 12 of your own. "None" always stays, because it's how your stats know a trade had no mistake.
+
+Anything new you type under "Other" is added to your list when you save the trade, as long as you have room. Removing a tag only takes it off the form: trades already using it keep it. Removed emotion and mistake tags can be put back.
+
+For emotions afterwards, you can mark your own tags as "felt bad". The Dashboard uses that when it counts clean losses that left you feeling bad.
+
+In Simple mode the emotion and mistake lists are hidden, since those fields aren't on the form.
 
 ## Reviewing your trades
 
@@ -60,7 +84,7 @@ Two review systems work alongside each other here.
 
 **Per-trade review.** History shows which trades still need review — no setup, mistake or emotion tag, notes, or plan-adherence marked. Click "Start review" and it jumps straight into the first one, and saving takes you straight to the next, so working through a backlog doesn't mean returning to History and reopening each trade by hand.
 
-**Period reviews.** Reviews has three always-on cards — Today, This week, This month — each with a short set of reflection prompts and a 1–5 process rating. If a day gets missed, "Backfill a past review" opens (or creates) the entry for any past day, week, or month.
+**Period reviews.** Reviews has three always-on cards — Today, This week, This month — each with a short set of reflection prompts and a 1–5 process rating. If you've logged emotions for that period, the card lists them too, at entry and afterwards. If a day gets missed, "Backfill a past review" opens (or creates) the entry for any past day, week, or month.
 
 ## Dashboard and stats
 
@@ -68,11 +92,18 @@ The Dashboard leads with your Trading Score, weighted 40% process, 30% consisten
 
 - Win rate, average win versus average loss, profit factor, Sharpe (R)
 - An equity curve, toggled between R and P&L
-- Streaks — your current win/loss streak, plus process streaks: days of daily reviews, days of full rule adherence, days of logging how you felt, all running in parallel
-- R by time of day, R by how you felt, R by process score
+- Streaks — your current win/loss streak, plus process streaks: days of daily reviews, days of full rule adherence, days of logging how you felt at entry, all running in parallel
+- Clean losses: of the trades that lost even though you followed your plan with no mistake, how many left you feeling bad. It appears once you have three with an emotion logged afterwards
+- R by time of day, R by how you felt at entry, R by process score
 - A 12-week calendar heatmap
 
-Stats goes deeper still, with cost-of-mistake and cost-of-emotion breakdowns and session or day-of-week performance.
+Stats goes deeper still, with cost-of-mistake and cost-of-entry-emotion breakdowns and session or day-of-week performance. Three sections use the emotion you log afterwards:
+
+- **Emotion afterwards × process** shows whether you're reacting to how you traded or just to the result.
+- **Your next trade** shows how the next trade you opened within 24 hours went, grouped by how the last one left you feeling.
+- **Entry → afterwards** lists your most common pairs of feelings going in and coming out, with the average result.
+
+They need a fair number of trades before the patterns mean much.
 
 ## Guardrails
 

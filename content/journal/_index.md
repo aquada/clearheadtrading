@@ -185,7 +185,7 @@ Click any screenshot to view it full size — the lightbox scrolls through the w
 
 ### Free
 
-Manual and CSV/MT4 import logging, the full Dashboard and Stats suite, per-trade and period reviews, guardrails, prop firm challenge tracking, and the leaderboard.
+Manual and CSV/MT4 import logging, the full Dashboard and Stats suite, per-trade and period reviews, guardrails, and prop firm challenge tracking.
 
 </div>
 

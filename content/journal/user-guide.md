@@ -17,7 +17,7 @@ Sign up, then set your timezone correctly before you go any further. Every stat 
 
 You'll then land in a short setup wizard:
 
-- An optional leaderboard opt-in, ranked by average R-multiple, never by P&L or account size — nobody can see your account size
+- An optional leaderboard opt-in. The leaderboard is a future feature: tick it now and you'll be included when it opens. It will rank by average R-multiple, never by P&L or account size
 - A quick R-multiple explainer
 - Your trade log detail level: Simple, Normal, or Strict (below)
 - Optional setup tags for your own trading strategies or patterns — start with none and add only what you use
@@ -64,6 +64,10 @@ There are two emotion fields, because how a trade felt going in and how it left 
 
 A clean trade that loses can feel very different by the time you sit down to review it. Keeping the two apart stops that feeling rewriting how you felt when you took it.
 
+### Followed my plan
+
+Answer Yes or No, or leave it blank if you haven't decided. A blank answer shows as "Not marked" and isn't counted as breaking your plan, and it doesn't end your rule adherence streak. Click the selected answer again to clear it.
+
 ### Managing your tags
 
 Setup, emotion, and mistake tags can all be changed in Settings.
@@ -92,12 +96,19 @@ The Dashboard leads with your Trading Score, weighted 40% process, 30% consisten
 
 - Win rate, average win versus average loss, profit factor, Sharpe (R)
 - An equity curve, toggled between R and P&L
-- Streaks — your current win/loss streak, plus process streaks: days of daily reviews, days of full rule adherence, days of logging how you felt at entry, all running in parallel
+- Streaks — your current win/loss streak, plus process streaks: days of daily reviews, days of full rule adherence, days of logging how you felt at entry, all running in parallel. Streaks always cover your whole history, whichever range you've picked
 - Clean losses: of the trades that lost even though you followed your plan with no mistake, how many left you feeling bad. It appears once you have three with an emotion logged afterwards
 - R by time of day, R by how you felt at entry, R by process score
-- A 12-week calendar heatmap
+- A calendar heatmap of your daily results
 
-Stats goes deeper still, with cost-of-mistake and cost-of-entry-emotion breakdowns and session or day-of-week performance. Three sections use the emotion you log afterwards:
+The 30D, 60D, 90D and All buttons set how far back the rest of the Dashboard and Stats look.
+
+Stats goes deeper still, with cost-of-mistake and cost-of-entry-emotion breakdowns and session or day-of-week performance. Two sections compare how you trade when you stick to the plan and when you don't:
+
+- **Disciplined vs off-plan** puts the two side by side: number of trades, win rate, average result, and the emotions you most often logged at entry. Disciplined means you followed your plan with no mistake logged. Off-plan means you broke it or logged a mistake. Trades you haven't marked aren't counted.
+- **Disciplined trades by week** shows the share of your marked trades that were disciplined, so you can see whether it's improving. It switches to months once you have more than a year of trades.
+
+Three more use the emotion you log afterwards:
 
 - **Emotion afterwards × process** shows whether you're reacting to how you traded or just to the result.
 - **Your next trade** shows how the next trade you opened within 24 hours went, grouped by how the last one left you feeling.
